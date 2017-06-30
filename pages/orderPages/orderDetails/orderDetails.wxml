@@ -1,0 +1,110 @@
+<!--pages/orderPages/orderDetails/orderDetails.wxml-->
+<view class="container">
+    <view class="_details">
+        <view class="clear _deta_loud" wx:if="{{false}}">
+            <view class="_deta_wait left">等待支付</view>
+            <view class="left clear">
+                <view class="_deta_timeimg left"><image src="../../img/time4.png"></image></view>
+                <view class="_deta_time left">{{clock}} {{micro_second}}</view>
+            </view>
+        </view>
+
+        <view class="clear _deta_loud" wx:if="{{false}}">
+            <view class="_deta_wait left">订单未使用~快去享受服务吧！</view>
+        </view> 
+
+        <view class="clear _deta_loud" wx:if="{{false}}">
+            <view class="_deta_wait left">订单进行中</view>
+        </view> 
+
+        <view class="clear _deta_loud" wx:if="{{false}}">
+            <view class="_deta_wait left">交易已结束，快去评价吧</view>
+        </view> 
+        <view class="clear _deta_loud">
+            <view class="_deta_wait left">交易已结束</view>
+        </view>
+
+        <view class="_deta_order">
+            订单编号：2017 9934 9926 0014
+        </view>
+    </view>
+    <view class="_cont_master bmg">
+        <view class="_contant_item_main clear">
+            <view class="_contant_item_store left">鄞州区罗蒙环球城店</view>
+        </view>    
+        <view class="_contant_item_main clear">
+            <view class="_contant_item_img left">
+              <image src="../../img/Bitmap1.png"></image>
+            </view>
+            <view class="_contant_item_txt left">
+                <view class="_contant_item_name">买衡力瘦脸送光子嫩肤</view>
+            </view>
+            <view class="_contant_item_bot right">
+                <view class="_contant_item_price">￥88</view>
+                <view class="_contant_item_num">x1</view>
+            </view>
+        </view>
+        <view class="_contant_item_main clear">
+             <view class="_contant_item_priceT left">商品总价</view>
+             <view class="_contant_item_priceT right">￥88</view>
+        </view>
+        <view class="_contant_item_pay bmg clear">
+              <view class="right">需付款：<text>￥88</text></view>
+        </view>                        
+    </view>
+    <view class="_serve clear">
+        <view class="left _serve_le"></view>
+        <view class=" left">
+            <view class="_contant_item_serve bmg">            
+                <view class="_item__serve clear">
+                    <view class=" left">服务编号:94191491911606016060</view>
+                    <view class="_item_status right">等待付款</view>
+                </view>
+                    
+                <view class="_item_times clear">
+                    <view class="_item_timesimg left"><image src="../../img/date5.png"></image></view>
+                    <view class="left _item_status">未预约<text>（请在2017-12--04前选择）</text></view>
+                </view>
+                <view class="_item_ress clear">
+                    <view class="_item_ressimg left"><image src="../../img/adress.png"></image></view>
+                    <view class="left">宁波市鄞州区罗蒙环球城</view>
+                </view>
+            </view>
+            <view class="_contant_item_serve bmg">            
+                <view class="_item__serve clear">
+                    <view class=" left">服务编号:94191491911606016060</view>
+                    <view class="_item_status right">等待付款</view>
+                </view>
+                    
+                <view class="_item_times clear">
+                    <view class="_item_timesimg left"><image src="../../img/date5.png"></image></view>
+                    <view class="left _item_status">未预约<text>（请在2017-12--04前选择）</text></view>
+                </view>
+                <view class="_item_ress clear">
+                    <view class="_item_ressimg left"><image src="../../img/adress.png"></image></view>
+                    <view class="left">宁波市鄞州区罗蒙环球城</view>
+                </view>
+            </view>              
+        </view>        
+    </view>
+    <view class="_contant_item_btn bmg" wx:if="{{false}}">
+          <view class="_contant_item_l">取消订单</view>
+          <view class="_contant_item_r">去支付</view>
+    </view>
+    <view class="_contant_item_btn bmg" wx:if="{{false}}">
+          <view class="_contant_item_l">再次购买</view>
+          <view class="_contant_item_r">核销订单</view>
+    </view>
+    <view class="_contant_item_btn bmg" wx:if="{{false}}">
+          <view class="_contant_item_le">再次购买</view>
+          <view class="_contant_item_ri">联系TA</view>
+    </view>
+   <view class="_contant_item_btn bmg" wx:if="{{false}}">
+          <view class="_contant_item_le">再次购买</view>
+          <view class="_contant_item_ri colorm">评价</view>
+    </view>
+    <view class="_contant_item_btn bmg">
+          <view class="_contant_item_le">再次购买</view>
+          <view class="_contant_item_ri">删除订单</view>
+    </view>     
+</view>

@@ -1,0 +1,212 @@
+/**app.wxss**/
+page{ background: #f8f8f8;font-size: 24rpx;line-height: 34rpx;color: #666666}
+.clear::after{display: block;clear: both;content: "";height: 0;overflow: hidden;visibility: hidden}
+.left{float: left}
+.right{float: right}
+
+.bmg{background: #fff}
+.margint{margin-top: 20rpx;}
+
+/* 缺省 */
+._navbar_matter_no{padding: 70rpx 238rpx; text-align: center;font-size: 28rpx;color: #999999}
+._navbar_matter_no image{width: 267rpx; height: 322rpx;margin-bottom: 30rpx;}
+
+
+/*commonCSS*/
+.bg-wt{
+  background: #fff;
+}
+.block {
+  display: block;
+}
+
+.txt-c {
+  text-align: center;
+}
+
+.ft24 {
+  font-size: 24rpx;
+}
+
+.ft26 {
+  font-size: 26rpx;
+}
+
+.fl-r {
+  float: right;
+}
+
+.ft28 {
+  font-size: 28rpx;
+}
+
+.ft30 {
+  font-size: 30rpx;
+}
+
+.ft32 {
+  font-size: 32rpx;
+}
+
+.ft34 {
+  font-size: 34rpx;
+}
+
+.plr20 {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+
+.plr30 {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.mr20 {
+  margin-right: 20rpx;
+}
+
+.ml20 {
+  margin-left: 20rpx;
+}
+
+.ml30 {
+  margin-left: 30rpx;
+}
+
+.ml60 {
+  margin-left: 60rpx;
+}
+
+.mt20 {
+  margin-top: 20rpx;
+}
+
+.mb20 {
+  margin-bottom: 20rpx;
+}
+
+.mb30 {
+  margin-bottom: 30rpx;
+}
+
+.mt30 {
+  margin-top: 30rpx;
+}
+
+.pt20 {
+  padding-top: 20rpx;
+}
+
+.pb20 {
+  padding-bottom: 20rpx;
+}
+
+.ptb30 {
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+
+.pd15 {
+  padding: 15rpx;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.tc {
+  text-align: center;
+}
+
+.bd-r6 {
+  border-radius: 6rpx;
+  overflow: hidden;
+}
+
+.ovfl {
+  overflow: hidden;
+}
+
+image {
+  width: 100%;
+}
+
+.c6 {
+  color: #666;
+}
+
+.c3 {
+  color: #333;
+}
+
+.c3c {
+  color: #3c3c3c;
+}
+
+.c9 {
+  color: #999;
+}
+.cff{
+  color: #ff4c90
+}
+
+.cl {
+  clear: both;
+}
+
+.white {
+  color: #fff;
+}
+
+.box-s {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.bold {
+  font-weight: bold;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.pos-a {
+  position: absolute;
+}
+
+.pos-f {
+  position: fixed;
+  bottom: 0;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.ft38 {
+  font-size: 38rpx;
+}
+
+.w-100 {
+  width: 100%;
+}
+.w-50{
+  width: 50%
+}
+.display-flex {
+  display: flex !important;
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
+}

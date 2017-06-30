@@ -1,0 +1,62 @@
+<!--pages/levelPages/Address/Address.wxml-->
+<view class="container">
+    <view class="_add_cant clear bmg">
+        <view class="_cant_door left "  data-idx="0" bindtap="navbarTap">
+              <view class="_cant_item  {{currentTab==0 ? 'active' : ''}}">
+                <view class="_cant_doorimg" wx:if="{{currentTab==1}}"><image src="../../img/craftsman2.png"></image></view>
+                <view class="_cant_doorimg" wx:else><image src="../../img/craftsman1.png"></image></view>
+                <view class="_cant_txt">匠星上门</view>
+              </view>  
+        </view>
+        <view class="_cant_shop right "  data-idx="1" bindtap="navbarTap">
+              <view class="_cant_item {{currentTab==1 ? 'active' : ''}}">
+                <view class="_cant_shopimg" wx:if="{{currentTab==0}}"><image src="../../img/customer2.png"></image></view>
+                <view class="_cant_shopimg" wx:else><image src="../../img/customer1.png"></image></view>
+                <view class="_cant_txt">顾客到店</view>    
+             </view>       
+        </view>
+    </view>
+    <view class="margint bmg">
+        <view class="goods_list" wx:if="{{currentTab==0}}">
+            <radio-group class="group" bindchange="checkboxChange">
+                <view class="clear goods_item"   wx:for="{{addss}}" wx:key="gg">
+                      <view class="goods_text left">
+                          <view class="goods_title">{{item.title}}</view>
+                          <view class="goods_address">{{item.address}}</view>
+                      </view>
+                      <view class="goods_check right" >
+                          <radio value="{{item.uuid}}" checked="{{item.checked}}"></radio>   
+                          <view class="label-icon">
+                              <view class="label_icon_checked" style="opacity:{{item.checked ? 1: 0}}">
+                                <image src="../../img/gou.png"></image>
+                              </view>
+                          </view>                
+                      </view>
+
+                      <!--<view class="goods-del" data-id="{{item.historyid}}" bindtap="del"></view>-->
+                  </view>
+              </radio-group>
+        </view>
+        <view class="goods_list" wx:if="{{currentTab==1}}">
+            <radio-group class="group" bindchange="checkboxChange">
+                <view class="clear goods_item"   wx:for="{{items}}" wx:key="gg">
+                      <view class="goods_text left">
+                          <view class="goods_title">{{item.title}}</view>
+                          <view class="goods_address">{{item.address}}</view>
+                      </view>
+                      <view class="goods_check right" >
+                          <radio value="{{item.uuid}}" checked="{{item.checked}}"></radio>   
+                          <view class="label-icon">
+                              <view class="label_icon_checked" style="opacity:{{item.checked ? 1: 0}}">
+                                <image src="../../img/gou.png"></image>
+                              </view>
+                          </view>                
+                      </view>
+
+                      <!--<view class="goods-del" data-id="{{item.historyid}}" bindtap="del"></view>-->
+                  </view>
+              </radio-group>
+        </view>
+    </view>
+    <view wx:if="{{currentTab==0}}" class="_add_btn">添加新地址</view>
+</view>

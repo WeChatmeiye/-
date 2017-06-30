@@ -1,0 +1,74 @@
+<!--pages/secondPages/card/card.wxml-->
+<view class="container">
+  <view class="contant clear">
+      <image class="card_backg" src="../../img/bg.png"></image>
+      <view class="card_top">
+          <view class="clear card_top_cant">
+              <view class="left">权限：全场折扣</view>
+              <view class="right card_top_look">查看会员权限？</view>
+          </view>
+          <view class="clear card_top_vip">
+              <view class="left clear">
+                  <view class="left card_vip_head">
+                      <image src="../../img/head.png"></image>
+                  </view>
+                   <view class="left card_vip_cant">
+                      <view class="card_vip_name">Bullet</view>
+                      <view class="card_vip_post">VIP会员</view>
+                  </view>                 
+              </view>
+              <view class="right card_vip_balance">
+                  我的余额：200￥
+              </view>
+          </view>
+          <view class="clear card_top_class">
+              <view class="left">lv.15</view>
+              <view class="right card_alass_plan">
+                <view class="card_alass_rate" style="width:60%"></view>
+              </view>
+          </view>
+          <view class="card_alass_rade">再消费￥100升为lv.16</view>
+      </view>
+  </view>
+  <view class="card_info">
+      <view class="_navbar_title bmg">
+          <view class="_navbar_item {{currentTab==0 ? 'active' : ''}}" data-idx="0" bindtap="navbarTap">
+          我的消费记录
+          </view>    
+          <view class="_navbar_item {{currentTab==1 ? 'active' : ''}}" data-idx="1" bindtap="navbarTap">         
+             我的卡券
+          </view>           
+      </view>
+      
+      <view wx:if="{{currentTab==0}}" class="_composite">
+          <view class="_navbar_matter" wx:if="{{noRecord}}">
+            <view class="_composite_item" wx:for="{{composite}}" wx:key="gg">
+                <view class="_navbar_matter_title clear">
+                    <view class="left">{{item.title}}</view>
+                    <view class="right">{{item.time}}</view>
+                </view>
+                <view class="_navbar_matter_content" wx:for="{{item.record}}">
+                    <view class="_navbar_matter_name">{{item.name}}</view>
+                    <view class="_navbar_matter_number">{{item.num}}</view>
+                    <view class="_navbar_matter_price">{{item.price}}</view>
+                </view>
+            </view> 
+          </view>  
+          <view class="_navbar_matter_no" wx:else>
+               <view class="no_record"><image src="../../img/no_record.png"></image></view> 
+               <view class="no_txt">暂无消费记录</view>
+          </view>           
+      </view>
+  
+     
+     <view wx:if="{{currentTab==1}}" class="_composite clear">
+         <view class="_navbar_matter" wx:if="{{noCoupons}}">2
+         </view>
+        <view class="_navbar_matter_no" wx:else>
+               <view class="no_record"><image src="../../img/no_coupons.png"></image></view> 
+               <view class="no_txt">暂无优惠券</view>
+          </view>         
+     </view>  
+      
+  </view>
+</view>  

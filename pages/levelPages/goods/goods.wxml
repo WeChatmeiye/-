@@ -1,0 +1,179 @@
+<!--pages/levelPages/goods/goods.wxml-->
+<view class="container">
+    <view class="swiper-container">
+        <swiper autoplay="auto" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}"  indicatorColor="{{indicatorColor}}"  indicatorActiveColor="{{indicatorActiveColor}}" duration="{{duration}}" interval="5000" duration="500" class="swiper">
+          <block wx:for="{{slider}}" wx:key="gg">
+              <swiper-item>
+                <image src="{{item.url}}" class="bannerImg" mode="aspectFill"></image>
+              </swiper-item>
+          </block>
+        </swiper>  
+    </view>
+    <view class="_wrap_cant bmg">
+        <view class="_name_img">
+          <image  src="../../img/head1.png"></image> 
+        </view>
+        <view class="_person"> 
+           <view class="clear">
+              <view class="_wrap_name left">关雎尔</view>
+              <view class="_wrap_job left" >美甲师</view> 
+           </view>    
+          <view class="_wrap_star"><image  src="../../img/picture.png"></image> </view>
+        </view>                 
+    </view> 
+
+    <view class="_composite_cant bmg">
+      <view class="_composite_name">限时爆款！显白桃花气质约会甲</view>
+      <view class="_composite_info clear">
+        <view class="_composite_price clear left">
+          <view class="_composite_now left">￥<text>218</text></view>
+          <view class="_composite_former left">￥<text>498</text></view>
+        </view>
+        <view class="_composite_like right">256人喜欢</view>
+      </view>
+    </view>
+
+    <view class="_buynum_cant bmg">
+        <view class="clear">
+            <view class="left _buynum_text">购买数量</view>
+            <view class="right _buynum_nums">
+                <view class="left _buynum_sub">-</view>
+                <view class="left _buynum_num">1</view>
+                <view class="left _buynum_add">+</view>
+            </view>
+        </view>
+    </view> 
+    <view class="_sts bmg margint">
+        <view class="_sts_title clear">
+          <view class="_star left">适用门店(2)</view>
+          <view class="right clear _more">
+            <view class="right"><image src="../../img/right.png"></image></view>     
+          </view>
+        </view> 
+        <view class="_location clear">
+          <view class="_location_info left">
+              <view class="_location_store">宁波银泰城店(离你最近)</view>
+              <view class="_location_site">鄞州区罗蒙环球城77号</view>
+              <view class="_location_time">营业时间：6:00-22-00</view>
+              <view class="_location_distance clear">
+                  <view class="left _location_distance_img"><image src="../../img/adress.png"></image></view>
+                  <view class="left">58米</view>
+              </view>
+          </view>  
+          <view class="right _location_phone">
+              <image src="../../img/phone.png"></image>
+          </view>     
+        </view>              
+     </view>   
+    <view class="_sts bmg margint">
+        <view class="_sts_title clear">
+          <view class="_star left">可约时间</view>
+          <view class="_nodate left clear">
+              <view class="_nodate_img left"><image src="../../img/Irreducible.png"></image></view>
+              <view class="left">不可约</view>
+          </view>
+          <view class="_date left">
+              <view class="_date_img left"><image src="../../img/about.png"></image></view>
+              <view class="left">可约</view>         
+          </view>
+          <view class="right clear _more">
+            <view class="right"><image src="../../img/right.png"></image></view> 
+            <view class="text right">查看30天</view>     
+          </view>
+        </view> 
+        <view class="_location clear">
+            <view class="_date_top">
+                <view class="_data_text clear">
+                    <view class="left _data_txt">时段</view>
+                    <view class="left _data_time _data_time_f">08</view>
+                    <view class="left _data_time">10</view>
+                    <view class="left _data_time">12</view>
+                    <view class="left _data_time">14</view>
+                    <view class="left _data_time">16</view>
+                    <view class="left _data_time">18</view>
+                    <view class="left _data_time">20</view>
+                    <view class="left _data_time">22</view>
+                    <view class="left _data_time">24</view>
+                </view>
+                <view class="_date_topimg"><image src="../../img/line.png"></image></view>
+            </view>
+            <view class="_data_bottom" wx:for="{{time}}" wx:key="gg">
+                <view class="clear">
+                    <view class="left _date_txt">{{item.date}}</view>
+                    <view class="left clear _date_img">
+                        <view class="left _data_bottomimg" wx:for="{{item.times}}" wx:key="gg">
+                            <image wx:if="{{item.isable}}" src="../../img/about.png"></image>
+                            <image wx:else src="../../img/Irreducible.png"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>              
+     </view>  
+
+    <view class="_sts bmg margint">
+        <view class="_sts_title clear">
+          <view class="_star details left">详情</view>
+        </view> 
+        <view class="_details_info">
+            <view class="clear">
+                <view class="_details_name left">艺术家的胶Artistic美甲套餐</view>
+                <view class="_details_cant right">
+                    <view class="clear">
+                        <view class="left">1份</view>
+                        <view class="right">280元</view>
+                    </view>
+                    <view class="clear">
+                        <view class="left">总价值</view>
+                        <view class="right">280元</view>
+                    </view>
+                    <view class="clear">
+                        <view class="left">团购价</view>
+                        <view class="right">88元</view>
+                    </view>
+                </view>
+            </view> 
+            <view class="_location">包含：基础护理、GUCCI磨砂、手霜、单色上色（400色可选）</view> 
+        </view>     
+        <view class="_sts_title _sts_bord clear" bindtap="clickTimgood">
+          <view class="_star _look left">查看图文详情</view>
+          <view class="right clear _more">
+            <view class="right"><image src="../../img/right.png"></image></view>     
+          </view>
+        </view>          
+     </view>  
+    <view class="_sts bmg margint">
+        <view class="_sts_title clear">
+          <view class="_star details left">评价(20)</view>
+        </view> 
+        <view class="_eval_info">
+            <view class="clear">
+                <view class="_eval_head left">
+                    <image src="../../img/head1.png"></image>
+                </view>
+                <view class="left _eval_cant">
+                    <view class="_eval_name">关雎尔</view>
+                    <view class="_eval_manner">超出期待</view>
+                </view>
+            </view>
+            <view class="_eval_matter">做的不错</view>
+            <view class="clear _eval_time">
+                <view class="left">2017-05-08 15:70</view>
+                <view class="right">购买项目：<text>春季条色素</text></view>
+            </view>
+        </view>
+        <view class="_sts_title _sts_bord clear">
+          <view class="_star _look left">查看更多评论</view>
+          <view class="right clear _more">
+            <view class="right"><image src="../../img/right.png"></image></view>     
+          </view>
+        </view>          
+    </view>   
+    <view class="_goods_btn clear">
+        <view class="left _goods_coll">
+            <view class="_goods_collimg"><image src="../../img/start2.png"></image></view>
+            <view>收藏</view>
+        </view>
+        <view class="right _goods_buy">立即购买</view>
+    </view>               
+</view>    

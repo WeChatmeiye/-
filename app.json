@@ -1,0 +1,30 @@
+{
+  "pages":[    
+
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/secondPages/store/store",
+    "pages/secondPages/code/code",
+    "pages/secondPages/card/card",
+    "pages/secondPages/collect/collect",
+    "pages/levelPages/goods/goods",
+    "pages/levelPages/timGood/timGood",
+    "pages/levelPages/storeList/storeList",
+    "pages/levelPages/submitOrder/submitOrder",
+    "pages/levelPages/Address/Address",
+    "pages/levelPages/newAddress/newAddress",
+    "pages/orderPages/order/order",
+    "pages/orderPages/orderDetails/orderDetails",
+    "pages/orderPages/orderPay/orderPay",
+    "pages/orderPages/paySuccess/paySuccess",
+    "pages/orderPages/orderAppraise/orderAppraise",
+    "pages/actors/manicurist/manicurist",
+    "pages/clubCard/clubCard"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "美业",
+    "navigationBarTextStyle":"black"
+  }
+}

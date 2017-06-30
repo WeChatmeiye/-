@@ -1,0 +1,9 @@
+/* pages/levelPages/storeList/storeList.wxss */
+._location{border-bottom: 1rpx solid #f8f8f8;}
+._location_info{width: 568rpx;padding: 24rpx 30rpx;position: relative;}
+._location_store{font-weight: bold;margin-bottom: 20rpx;}
+._location_time{margin-top: 4rpx;}
+._location_distance{position: absolute;color: #999999;right: 30rpx;top:50%;margin-top: -20rpx;}
+._location_distance_img image{width: 30rpx;height: 34rpx;margin-right: 20rpx;}
+._location_phone{border-left: 1rpx solid #f8f8f8;padding: 69rpx 36rpx;}
+._location_phone image{width:40rpx;height: 40rpx; }

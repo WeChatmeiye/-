@@ -1,0 +1,54 @@
+/* pages/orderPages/order/order.wxss */
+._me_title_items{display: flex;width:100%;white-space: nowrap;height: 98rpx;}
+._me_title_Item{display: inline-block;line-height: 92rpx;text-align: center;color: #999999;width: 140rpx;font-size: 30rpx }
+.active{border-bottom: solid 4rpx #FF4C90;color: #FF4C90}
+
+._contant_item{padding: 0 30rpx}
+._contant_item_main{padding:24rpx 0;border-bottom: 2rpx solid #f0f0f0;line-height:42rpx;font-size: 30rpx;}
+._contant_item_store{color:#111111 }
+._contant_item_status{color: #FF4C90}
+
+
+._contant_item_img{width: 140rpx;height: 140rpx;} 
+._contant_item_img image{width: 140rpx;height: 140rpx;}
+._contant_item_txt{margin-left: 30rpx}
+._contant_item_name{color: #333333;}
+._contant_item_ress{color: #666666;font-size: 24rpx;line-height: 34rpx;margin-top: 77rpx}
+
+._contant_item_bot{text-align: right}
+._contant_item_price{color: #999999;font-size: 26rpx}
+._contant_item_num{color: #999999;font-size: 26rpx;margin-top: 10rpx}
+._contant_item_Tprice{font-size: 22rpx;margin-top: 20rpx}
+._contant_item_Tprice text{font-size:30rpx;color: #FF4C90}
+
+._contant_item_serve{padding: 10rpx 20rpx;background: #f7f7f7;border-radius: 8rpx;margin: 20rpx 0}
+._item_status{text-align: right;font-size:26rpx;color: #FF4C90 }
+._item_times{font-size: 24rpx;color: #333333;line-height: 30rpx;padding: 10rpx 0}
+._item_timesimg {width:30rpx;height: 30rpx;margin-right: 20rpx}
+._item_timesimg image{width:30rpx;height: 30rpx}
+
+._item_ress{line-height: 34rpx;padding: 10rpx 0}
+._item_ressimg {width: 30rpx;height: 34rpx;margin-right: 20rpx }
+._item_ressimg image{width:30rpx;height: 34rpx}
+.changeTime{font-size: 24rpx;color: #333333;background: #fff;width: 140rpx;height: 44rpx;line-height: 44rpx;text-align: center;border-radius: 8rpx;margin: 20rpx 0}
+
+._contant_item_btn{display: flex;line-height: 88rpx;text-align: center;font-size: 30rpx;color: #333333}
+._contant_item_l{flex: 1}
+._contant_item_r{flex: 1;background: #FF4C90;color: #ffffff}
+
+._contant_item_le{flex: 1;border-right: 2rpx solid #f7f7f7;line-height: 42rpx;margin: 22rpx 0} 
+._contant_item_ri{flex: 1;line-height: 42rpx;margin: 22rpx 0}
+.colorm{color: #FF4C90}
+
+
+._contant_item_no{padding: 86rpx 30rpx 38rpx;text-align: center}
+.no_contant{width: 277rpx;height: 322rpx;margin-left:auto;margin-right: auto;margin-bottom: 70rpx }
+.no_contant image{width: 277rpx;height: 322rpx;}
+
+.no_txt{font-size: 28rpx;color:#999999 ;line-height: 42rpx;margin-bottom: 40rpx}
+.no_text{color:#3f3f3f;font-size: 30rpx }
+
+.no_contant_btn{background: #FF4C90;line-height: 98rpx;height: 98rpx;border-radius: 100rpx;font-size: 32rpx;color: #ffffff}
+
+
+

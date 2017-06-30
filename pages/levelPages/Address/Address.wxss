@@ -1,0 +1,35 @@
+/* pages/levelPages/Address/Address.wxss */
+._add_cant{padding-top: 40rpx;text-align: center}
+._cant_door,._cant_shop{width:374rpx;}
+._cant_door{border-right: 2rpx #f7f7f7 solid}
+
+._cant_item{margin-left: 126rpx;width: 120rpx}
+._cant_txt{padding-bottom: 10rpx;border-bottom: 4rpx dashed #fff}
+
+.active ._cant_txt{border-bottom: 4rpx solid #FF4C90;color: #FF4C90}
+
+._cant_doorimg{width: 80rpx;height: 76rpx;margin-bottom: 20rpx;margin-left: 20rpx}
+._cant_doorimg image{width: 80rpx;height: 76rpx}
+._cant_shopimg{width: 80rpx;height: 72rpx;margin-bottom: 20rpx;margin-left: 20rpx}
+._cant_shopimg image{width: 80rpx;height: 72rpx}
+
+
+
+.goods_item{border-bottom:1rpx solid #f8f8f8;padding: 30rpx }
+.goods_check{position: relative;margin-top: 30rpx}
+radio{opacity: 0;position: absolute;left: 0;top: 0;width: 50rpx;height: 50rpx;z-index: 99}
+.goods_title{color: #111111;font-size: 30rpx;line-height: 42rpx}
+.goods_address{line-height: 40rpx;color: #999999;font-size: 28rpx;margin-top: 20rpx}
+
+
+/*
+.goods-del {float: right;width: 28rpx;height: 28rpx;background: url(../img/del.png) no-repeat;background-size:28rpx 28rpx; margin-top: 85rpx; margin-right: 20rpx; }
+*/
+.label-icon {position: relative;margin-right: 10px;display: inline-block;vertical-align: middle;width: 40rpx;height: 40rpx; border:solid 2rpx #c8c8c8;border-radius: 50%;}
+
+.label_icon_checked { position: absolute;top:0;left:0;width:40rpx; height: 40rpx;}
+
+.label_icon_checked image{width: 40rpx;height: 40rpx}
+
+
+._add_btn{position: fixed;width: 750rpx;bottom: 0;left: 0;background: #FF4C90;height: 100rpx;line-height: 100rpx;text-align: center;color: #fff;font-size: 32rpx}

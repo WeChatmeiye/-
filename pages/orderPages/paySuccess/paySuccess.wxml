@@ -1,0 +1,19 @@
+<!--pages/orderPages/paySuccess/paySuccess.wxml-->
+<view class="container">
+    <view class="_details">
+        <view class="clear _deta_loud">
+            <view class="_deta_wait left">恭喜您支付成功~</view>
+        </view>
+        <view class="_deta_order">
+            订单编号：2017 9934 9926 0014
+        </view>
+    </view>
+    <view class="_deta_info clear bmg">
+        <view class="left _deta_txt">支付金额</view>
+        <view class="right _deta_num">￥<text>88</text></view>
+    </view>
+    <view class="_contant_item_btn">
+        <view class="_contant_item">再次购买</view>
+        <view class="_contant_item">删除订单</view>
+    </view> 
+</view>        

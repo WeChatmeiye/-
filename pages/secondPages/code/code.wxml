@@ -1,0 +1,17 @@
+<!--pages/secondPages/code/code.wxml-->
+<view class="container">
+    <view class="code_cont">
+        <view class="code_head">
+            <image src="../../img/picture.png"></image>            
+        </view>
+        <view class="code_text">美发美业</view>
+        <view class="code_number">622222222222222222222222</view>
+        <view class="code_code">
+            <image src="../../img/picture.png"></image>      
+        </view>
+        <view class="code_hint" style="background:url(../../img/picture.png) no-repeat;padding-left:30rpx;background-size:20rpx 24rpx;background-position-x:110rpx;background-position-y:4rpx;">每2分钟自动更新</view>
+    </view>
+    <view class="code_btn">
+        <view class="code_btn_back">返回</view>    
+    </view>
+</view>

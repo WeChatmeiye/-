@@ -1,0 +1,161 @@
+<!--pages/orderPages/order/order.wxml-->
+<view class="container">
+    <view class="_contant_nav">
+          <scroll-view class="_me_title_items bmg" scroll-x="true">
+            <block wx:for-items="{{items}}" wx:key="{{index}}">
+              <view id="{{index}}" class="_me_title_Item {{currentTab == index ? 'active' : ''}}" bindtap="navbarTap">
+                {{item.status}}
+              </view>
+            </block>
+          </scroll-view>
+    </view>
+    <view class="_contant_item bmg margint">
+        <view class="_contant_item_main clear">
+            <view class="_contant_item_store left">鄞州区罗蒙环球城店</view>
+            <view class="_contant_item_status right">待付款</view>
+        </view>
+        <view class="_contant_item_main clear">
+            <view class="_contant_item_img left">
+              <image src="../../img/Bitmap1.png"></image>
+            </view>
+            <view class="_contant_item_txt left">
+                <view class="_contant_item_name">买衡力瘦脸送光子嫩肤</view>
+                <view class="_contant_item_ress">宁波鄞州区罗蒙环球城</view>
+            </view>
+            <view class="_contant_item_bot right">
+                <view class="_contant_item_price">￥88</view>
+                <view class="_contant_item_num">x1</view>
+                <view class="_contant_item_Tprice">需付款：<text>￥88</text></view>
+            </view>
+        </view>
+    </view>
+    <view class="_contant_item_btn bmg">
+          <view class="_contant_item_l">取消订单</view>
+          <view class="_contant_item_r">去支付</view>
+    </view>
+    <view class="_contant_item bmg margint">
+        <view class="_contant_item_main clear">
+            <view class="_contant_item_store left">鄞州区罗蒙环球城店</view>
+            <view class="_contant_item_status right">等待服务</view>
+        </view>
+        <view class="_contant_item_main">
+          <view class="clear">
+              <view class="_contant_item_img left">
+                <image src="../../img/Bitmap1.png"></image>
+              </view>
+              <view class="_contant_item_txt left">
+                  <view class="_contant_item_name">买衡力瘦脸送光子嫩肤</view>
+                  <view class="_contant_item_ress">宁波鄞州区罗蒙环球城</view>
+              </view>
+              <view class="_contant_item_bot right">
+                  <view class="_contant_item_price">￥88</view>
+                  <view class="_contant_item_num">x1</view>
+                  <view class="_contant_item_Tprice">需付款：<text>￥88</text></view>
+              </view>
+           </view>
+           <view class="_contant_item_serve clear">
+              <view class="_item_status">等待服务</view>
+              <view class="_item_times clear">
+                  <view class="_item_timesimg left"><image src="../../img/date5.png"></image></view>
+                  <view class="left">2017-12-04 15:30</view>
+              </view>
+              <view class="_item_ress clear">
+                  <view class="_item_ressimg left"><image src="../../img/adress.png"></image></view>
+                  <view class="left">宁波市鄞州区罗蒙环球城</view>
+              </view>
+              <view class="changeTime right">修改时间</view>
+           </view>  
+        </view>
+    </view>  
+    <view class="_contant_item_btn bmg">
+          <view class="_contant_item_l">再次购买</view>
+          <view class="_contant_item_r">核销订单</view>
+    </view> 
+    <view class="_contant_item bmg margint">
+        <view class="_contant_item_main clear">
+            <view class="_contant_item_store left">鄞州区罗蒙环球城店</view>
+            <view class="_contant_item_status right">待付款</view>
+        </view>
+        <view class="_contant_item_main clear">
+            <view class="_contant_item_img left">
+              <image src="../../img/Bitmap1.png"></image>
+            </view>
+            <view class="_contant_item_txt left">
+                <view class="_contant_item_name">买衡力瘦脸送光子嫩肤</view>
+                <view class="_contant_item_ress">宁波鄞州区罗蒙环球城</view>
+            </view>
+            <view class="_contant_item_bot right">
+                <view class="_contant_item_price">￥88</view>
+                <view class="_contant_item_num">x1</view>
+                <view class="_contant_item_Tprice">需付款：<text>￥88</text></view>
+            </view>
+        </view>
+    </view>  
+    <view class="_contant_item_btn bmg">
+          <view class="_contant_item_le">再次购买</view>
+          <view class="_contant_item_ri">联系TA</view>
+    </view>
+
+    <view class="_contant_item bmg margint">
+        <view class="_contant_item_main clear">
+            <view class="_contant_item_store left">鄞州区罗蒙环球城店</view>
+            <view class="_contant_item_status right">待付款</view>
+        </view>
+        <view class="_contant_item_main clear">
+            <view class="_contant_item_img left">
+              <image src="../../img/Bitmap1.png"></image>
+            </view>
+            <view class="_contant_item_txt left">
+                <view class="_contant_item_name">买衡力瘦脸送光子嫩肤</view>
+                <view class="_contant_item_ress">宁波鄞州区罗蒙环球城</view>
+            </view>
+            <view class="_contant_item_bot right">
+                <view class="_contant_item_price">￥88</view>
+                <view class="_contant_item_num">x1</view>
+                <view class="_contant_item_Tprice">需付款：<text>￥88</text></view>
+            </view>
+        </view>
+    </view> 
+    <view class="_contant_item_btn bmg">
+          <view class="_contant_item_le">再次购买</view>
+          <view class="_contant_item_ri colorm">评价</view>
+    </view>
+
+
+    <view class="_contant_item bmg margint">
+        <view class="_contant_item_main clear">
+            <view class="_contant_item_store left">鄞州区罗蒙环球城店</view>
+            <view class="_contant_item_status right">待付款</view>
+        </view>
+        <view class="_contant_item_main clear">
+            <view class="_contant_item_img left">
+              <image src="../../img/Bitmap1.png"></image>
+            </view>
+            <view class="_contant_item_txt left">
+                <view class="_contant_item_name">买衡力瘦脸送光子嫩肤</view>
+                <view class="_contant_item_ress">宁波鄞州区罗蒙环球城</view>
+            </view>
+            <view class="_contant_item_bot right">
+                <view class="_contant_item_price">￥88</view>
+                <view class="_contant_item_num">x1</view>
+                <view class="_contant_item_Tprice">需付款：<text>￥88</text></view>
+            </view>
+        </view>
+    </view>  
+    <view class="_contant_item_btn bmg">
+          <view class="_contant_item_le">再次购买</view>
+          <view class="_contant_item_ri">删除订单</view>
+    </view> 
+
+
+
+    <view class="_contant_item_no">
+        <view class="no_contant"><image src="../../img/order_empty.png"></image></view> 
+        <view class="no_txt">
+          <view class="no_text">您还没有相关订单</view>
+          <view class="classname">可以去看看有哪些想要买的</view>
+        </view>
+        <view class="no_contant_btn">去逛逛</view>
+    </view>         
+   
+</view>

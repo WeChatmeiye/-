@@ -1,0 +1,36 @@
+/* pages/secondPages/collect/collect.wxss */
+._navbar_title{line-height: 98rpx;text-align: center;font-size: 30rpx;display: flex;border-bottom: 2rpx solid #FF4C90;margin-bottom: 20rpx;}
+._navbar_item{flex:1;position: relative}
+._navbar_title .active{color: #FF4C90;position: relative} 
+ .active::after{   position: absolute; border-left: 9px solid transparent;border-right: 9px solid transparent;border-bottom: 9px solid #FF4C90;
+    content: " ";display: block; width: 0; height: 0; bottom:0;left:170rpx;}
+
+._composite_item{padding: 20rpx 30rpx;margin-bottom: 10rpx;position: relative;}
+._composite_img{width: 220rpx;height: 220rpx;overflow: hidden;border-radius: 8rpx; }
+._composite_img image{width: 220rpx;height: 220rpx;}
+._navbar_matter_content{margin-left: 24rpx;width:440rpx;}
+._navbar_matter_shop{line-height: 42rpx;font-size: 30rpx;color: #111111}
+._navbar_matter_head{margin-top: 30rpx;line-height: 40rpx;}
+._navbar_matter_headimg{width: 40rpx;height: 40rpx;overflow: hidden;border-radius: 50%;margin-right: 10rpx;}
+._navbar_matter_headimg image{width: 40rpx;height: 40rpx;}
+._composite_info{margin-top: 60rpx;color: #999999;}
+._composite_now{color: #FF4C90}
+._composite_price{font-size: 22rpx;}
+._composite_now{color:#FF4C90}
+._composite_now text{line-height: 48rpx;font-size: 30rpx;font-weight: bold}
+._composite_former{margin-left: 10rpx;text-decoration:line-through}
+._composite_former text{line-height: 52rpx;}
+._composite_like{line-height: 48rpx;}
+
+._wrap_item{padding: 30rpx;margin-bottom: 20rpx;}
+
+._name_img{width: 140rpx;height: 140rpx;border-radius: 50%}
+._name_img image{width: 140rpx;height: 140rpx;}
+._person{width: 330rpx;margin-left: 30rpx;}
+._wrap_name{line-height: 46rpx;font-size: 32rpx;font-weight: bold}
+._wrap_job{margin-top: 16rpx;}
+._wrap_star{margin-top: 20rpx;}
+._wrap_star image{width: 180rpx;height: 30rpx;}
+._wrap_btn{width: 180rpx;height: 68rpx;border:solid #FF4C90 1rpx;text-align: center;line-height:68rpx;border-radius: 100rpx;margin-top: 36rpx;}
+
+._lookover{line-height: 88rpx;text-align: center;color: #FF4C90;font-weight: bold;font-size: 28rpx;position: fixed;bottom: 0;width: 750rpx;}

@@ -1,0 +1,15 @@
+/* pages/orderPages/paySuccess/paySuccess.wxss */
+._details{height: 80rpx;padding: 16rpx 30rpx 24rpx;color: #fff;background: -ms-linear-gradient(top, #FF8BB7,  #FF4C90);background:-moz-linear-gradient(top,#FF8BB7,  #FF4C90);background: -webkit-linear-gradient(top, #FF8BB7, #FF4C90);background: -o-linear-gradient(top, #FF8BB7, #FF4C90)}
+
+._deta_loud{line-height: 42rpx;}
+._deta_wait{margin-right: 30rpx;font-size: 30rpx;margin-bottom: 10rpx}
+._deta_timeimg{width: 28rpx;height: 28rpx;margin-top: 8rpx;margin-right: 12rpx}
+._deta_timeimg image{width: 28rpx;height: 28rpx}
+
+._deta_info{padding: 30rpx;font-size: 30rpx;color: #111;line-height:42rpx }
+._deta_num{color: #FF4C90;font-size: 22rpx}
+._deta_num text{font-size: 30rpx;}
+
+._contant_item_btn{padding: 180rpx 30rpx;display: flex}
+._contant_item{flex: 1;border:solid 1rpx #FF4C90;width: 338rpx;height: 88rpx;margin-left: 20rpx;line-height: 88rpx;text-align: center;border-radius: 8rpx;color: #FF4C90;font-size: 30rpx}
+._contant_item:first-child{margin-left: 0}

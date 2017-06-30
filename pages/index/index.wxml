@@ -1,0 +1,138 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="contant clear">
+      <view class="left index_scan">
+          <image src="../img/vipcard.png"></image>
+          <view class="text">扫一扫</view>
+      </view>
+      <view class="right index_project">
+          <view class="text index_vip" bindtap="clickCard">VIP会员</view>
+          <view class="text index_rank">目前等级lv.15</view>
+          <view class="text index_discount">极限：单笔订单不超过100享受8折</view>
+          <view class="index-nav">
+              <view class="index-item">
+                <image src="../img/card.png"></image>
+                <text>个人信息</text>
+              </view>
+            <view class="index-item" bindtap="clickCollect">
+                <image src="../img/atcrt.png"></image>
+                <text>我的收藏</text>
+              </view>
+            <view class="index-item">
+                <image src="../img/order.png"></image>
+                <text>我的订单</text>
+              </view>
+          </view>
+      </view>
+  </view>
+  <view class="index_recommend bmg clear" bindtap="clickRecommend">
+    <view class="left index_brand">
+      <image src="../img/picture.png"></image>
+    </view>
+    <view class="left index_mend">
+      <view class="index_mend_title">{{mendTitle}}</view>
+      <view class="index_mend_matter">{{mendMatter}}</view>
+    </view>
+  </view>
+  <view class="index_sts bmg margint">
+    <view class="index_sts_title clear">
+      <view class="index_star left">匠星</view>
+      <view class="right clear index_more">
+        <view class="right"><image src="../img/right.png"></image></view>
+        <view class="text right">查看更多</view>        
+      </view>
+    </view>
+    <scroll-view scroll-x="true">  
+      <view class="index_wrap" scroll-x="true">  
+          <view class="index_name" wx:for="{{name}}" wx:key="gg">  
+              <view class="clear index_wrap_item" bindtap="nameItem" data-id="{{}}">
+                <view class="index_name_img left">
+                   <image  src="{{item.img}}"></image> 
+                </view>
+                <view class="index_person left"> 
+                  <view class="index_wrap_name">{{item.name}}</view>
+                  <view class="index_wrap_job">{{item.job}}</view> 
+                  <view class="index_wrap_star"><image  src="{{item.star}}"></image> </view>
+                 </view> 
+              </view>   
+          </view>     
+      </view>  
+    </scroll-view>    
+  </view>
+  <view class="index_sts bmg margint">
+    <view class="index_sts_title clear">
+      <view class="index_star left">附近门店</view>
+      <view class="right clear index_more">
+        <view class="right"><image src="../img/right.png"></image></view>
+        <view class="text right">立即进入</view>        
+      </view>
+    </view> 
+    <view class="index_location">
+      <view class="index_location_store">宁波银泰城店(离你最近)</view>
+      <view class="index_location_site">鄞州区罗蒙环球城77号</view>
+      <view class="index_location_time">营业时间：6:00-22-00</view>
+      <view class="index_location_distance">58米</view>
+    </view>
+   </view> 
+   <!--商品排序-->
+   <view class="margint">
+      <view class="_navbar_title bmg">
+          <view class="_navbar_item {{currentTab==0 ? 'active' : ''}}" data-idx="0" bindtap="navbarTap">综合</view>    
+          <view class="_navbar_item {{currentTab==1 ? 'active' : ''}}" data-idx="1" bindtap="navbarTap">         
+             销量
+              <view class="_navbar_icon"><image src="../img/turndown.png"></image></view>
+          </view>   
+          <view class="_navbar_item {{currentTab==2 ? 'active' : ''}}" data-idx="2" bindtap="navbarTap">评价</view>         
+      </view>
+      <view class="_navbar_matter">
+        <view wx:if="{{currentTab==0}}" class="_composite clear">  
+            <view class="_composite_item left bmg" wx:for="{{composite}}" wx:key="gg">
+                 <view class="_composite_img"><image src="{{item.img}}"></image></view>
+                 <view class="_composite_cant">
+                    <view class="_composite_name">{{item.name}}</view>
+                    <view class="_composite_info clear">
+                      <view class="_composite_price clear left">
+                        <view class="_composite_now left">￥<text>{{item.xz}}</text></view>
+                        <view class="_composite_former left">￥<text>{{item.yl}}</text></view>
+                      </view>
+                      <view class="_composite_like right">{{item.like}}人喜欢</view>
+                    </view>
+                 </view> 
+                 <view class="_composite_item_head clear">
+                      <view class="_composite_item_img left"><image src="{{item.head}}"></image></view>
+                      <view class="left">{{item.personName}}</view>
+                 </view>              
+            </view>
+        </view>  
+
+        <view wx:if="{{currentTab==1}}" class="_composite clear">  
+            <view class="_composite_item left" wx:for="{{composite}}" wx:key="gg">
+                 <view class="_composite_img"><image src="{{item.img}}"></image></view>
+            </view>
+        </view> 
+        <view wx:if="{{currentTab==2}}">  
+          评价  
+        </view> 
+      </view>    
+    </view> 
+  <view class="_lookover bmg margint" bindtap="clickLookover">
+  查看更多改商户项目
+  </view>
+</view>
+<!--店铺介绍dialog-->
+<view class="mendbackg" wx:if="{{recommendDisplay}}" bindtap="clickRecommendClose">
+    <view class="mendDialog">
+      <view class="recommendDialog_title">{{mendTitle}}</view>
+      <view class="recommendDialog_matter">{{mendMatter}}</view>
+    </view>
+</view>
+<!--未领取会员卡dialog-->
+<view class="mendbackg" wx:if="{{vipCard}}">
+    <view class="mendDialog">
+      <view class="vipDialog_hint">
+          <view>您还未领取会员卡，</view>
+          <view>会员卡功能咱不能使用！</view>
+      </view>
+      <view class="vipDialog_confirm">确定</view>
+    </view>
+</view>

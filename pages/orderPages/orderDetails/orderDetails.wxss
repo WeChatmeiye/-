@@ -1,0 +1,48 @@
+/* pages/orderPages/orderDetails/orderDetails.wxss */
+page{padding-bottom:120rpx}
+._details{height: 80rpx;padding: 16rpx 30rpx 24rpx;color: #fff;background: -ms-linear-gradient(top, #FF8BB7,  #FF4C90);background:-moz-linear-gradient(top,#FF8BB7,  #FF4C90);background: -webkit-linear-gradient(top, #FF8BB7, #FF4C90);background: -o-linear-gradient(top, #FF8BB7, #FF4C90)}
+
+._deta_loud{line-height: 42rpx;}
+._deta_wait{margin-right: 30rpx;font-size: 30rpx;margin-bottom: 10rpx}
+._deta_timeimg{width: 28rpx;height: 28rpx;margin-top: 8rpx;margin-right: 12rpx}
+._deta_timeimg image{width: 28rpx;height: 28rpx}
+
+._cont_master{padding: 0 30rpx}
+._contant_item_main{padding:24rpx 0;border-bottom: 2rpx solid #f0f0f0;line-height:42rpx;font-size: 30rpx;}
+._contant_item_store{color:#111111 }
+
+
+._contant_item_img{width: 140rpx;height: 140rpx;} 
+._contant_item_img image{width: 140rpx;height: 140rpx;}
+._contant_item_txt{margin-left: 30rpx}
+._contant_item_name{color: #333333;}
+
+._contant_item_bot{text-align: right}
+._contant_item_price{color: #999999;font-size: 26rpx}
+._contant_item_num{color: #999999;font-size: 26rpx;margin-top: 10rpx}
+._contant_item_priceT{color: #666666;font-size: 24rpx}
+
+._contant_item_pay{line-height: 98rpx;font-size: 22rpx;color: #333333;}
+._contant_item_pay text{color: #FF4C90;font-size:28rpx}
+
+._serve{margin:10rpx }
+._serve_le{width: 8rpx;height: 8rpx;background:#FF4C90;margin-right: 10rpx;border-radius: 10rpx;border:6rpx solid #ffffff;margin-top: 24rpx}
+._contant_item_serve{padding: 10rpx 20rpx;width: 650rpx;border-radius: 8rpx;margin-bottom: 10rpx}
+._item_status{font-size:26rpx;color: #FF4C90 }
+._item_status text{color: #111111}
+._item__serve{padding: 10rpx 0;color: #999999}
+._item_times{font-size: 24rpx;color: #333333;line-height: 30rpx;padding: 10rpx 0}
+._item_timesimg {width:30rpx;height: 30rpx;margin-right: 20rpx}
+._item_timesimg image{width:30rpx;height: 30rpx}
+
+._item_ress{line-height: 34rpx;padding: 10rpx 0}
+._item_ressimg {width: 30rpx;height: 34rpx;margin-right: 20rpx }
+._item_ressimg image{width:30rpx;height: 34rpx}
+
+._contant_item_btn{display: flex;line-height: 88rpx;text-align: center;font-size: 30rpx;color: #333333;position: fixed;bottom: 0;width:750rpx }
+._contant_item_l{flex: 1}
+._contant_item_r{flex: 1;background: #FF4C90;color: #ffffff}
+
+._contant_item_le{flex: 1;border-right: 2rpx solid #f7f7f7;line-height: 42rpx;margin: 22rpx 0} 
+._contant_item_ri{flex: 1;line-height: 42rpx;margin: 22rpx 0}
+.colorm{color: #FF4C90}

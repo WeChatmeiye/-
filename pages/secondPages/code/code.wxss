@@ -1,0 +1,11 @@
+/* pages/secondPages/code/code.wxss */
+page{background: #ffffff}
+.code_cont{padding: 20rpx 165rpx;text-align: center}
+.code_head{border-radius: 50%;overflow: hidden;width: 200rpx;height: 200rpx;margin-left: 110rpx;margin-bottom: 20rpx;}
+.code_head image{width: 200rpx;height: 200rpx;}
+.code_text{font-size: 40rpx;color: #FF4C90;font-weight: bold;margin-bottom: 40rpx;}
+.code_number{font-size: 28rpx;line-height: 40rpx;color: #111111;font-weight: bold;margin-bottom: 40rpx;}
+.code_code image{width: 420rpx;height: 420rpx;}
+
+.code_btn{padding: 30rpx;}
+.code_btn_back{border:solid 1rpx #FF4C90;line-height: 98rpx;text-align: center;font-size: 32rpx;color: #FF4C90}

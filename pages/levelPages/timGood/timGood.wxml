@@ -1,0 +1,63 @@
+<!--pages/levelPages/timGood/timGood.wxml-->
+<view class="container">
+    <view class="cant_title">产品介绍</view>
+    <view class="cant_matter bmg">
+        <view class="cant_matter_t">
+   - 提供专属的造型设计，打造私属形象定制一站式服务 -        
+        </view>
+        <view class="cant_matter_m">
+　　苑苑形象设计，始创于1999，隶属于Y.YUAN苑苑集团。
+14年专注健康、时尚美学。已由起初的造型机构全面发展成为
+集形象设计、美容SPA、美容、国际教育、投资贸易、电子商
+务等产业链为一体的集团型企业。 苑苑形象设计为每位会员
+提供专属的造型设计、妆容定制、艺术美甲、服装搭配等私属
+形象定制，打造私属形象定制一站式服务。              
+        </view>   
+    </view>
+
+    <view class="cant_img bmg">
+        <view class="cant_img_show">
+          <image src="../../img/Bitmap1.png"></image>
+        </view>  
+        <view class="cant_img_show">
+          <image src="../../img/Bitmap2.png"></image>
+        </view> 
+        <view class="cant_img_show">
+          <image src="../../img/Bitmap3.png"></image>
+        </view> 
+    </view>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <view class="_goods_btn clear">
+        <view class="left _goods_coll">
+            <view class="_goods_collimg"><image src="../../img/start2.png"></image></view>
+            <view>收藏</view>
+        </view>
+        <view class="right _goods_buy">立即购买</view>
+    </view> 
+</view>

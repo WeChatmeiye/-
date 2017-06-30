@@ -1,0 +1,57 @@
+<!--pages/orderPages/orderAppraise/orderAppraise.wxml-->
+<view class="container">
+    <view class="_contant clear bmg">
+        <view class="left _contant_grade">总分</view>
+        <view class="left clear">
+            <view class="left clear _contant_stars">
+                <view data-item="0" class="_contant_star left" bindtap="clickImg">
+                     <view><image src="../../img/star2.png"> </image></view>
+                     <view class="_contant_s" wx:if="{{current > -1}}"><image src="../../img/star1.png"> </image></view>
+                </view>
+                <view data-item="1" class="_contant_star left" bindtap="clickImg">
+                     <view><image src="../../img/star2.png"> </image></view>
+                     <view class="_contant_s" wx:if="{{current > 0}}"><image src="../../img/star1.png"> </image></view>
+                </view>
+                <view data-item="2" class="_contant_star left" bindtap="clickImg">
+                     <view><image src="../../img/star2.png"> </image></view>
+                     <view class="_contant_s" wx:if="{{current > 1}}"><image src="../../img/star1.png"> </image></view>
+                </view>
+                <view data-item="3" class="_contant_star left" bindtap="clickImg">
+                     <view><image src="../../img/star2.png"> </image></view>
+                     <view class="_contant_s" wx:if="{{current > 2}}"><image src="../../img/star1.png"> </image></view>
+                </view>
+                <view data-item="4" class="_contant_star left" bindtap="clickImg">
+                     <view><image src="../../img/star2.png"> </image></view>
+                     <view class="_contant_s" wx:if="{{current > 3}}"><image src="../../img/star1.png"> </image></view>                   
+                </view>
+            </view>
+            <view class="left">{{level}}</view>
+        </view>
+    </view>
+    <view class="_contant bmg margint">
+        <view class="_contant_title clear">
+            <view class="_contant_head left"><image src="../../img/head1.png"></image></view>
+            <view class="_contant_name left">曲筱绡</view>
+        </view>
+        <view class="_contant_text margint clear">
+            <view class="left _contant_txt">
+                <textarea class="weui-textarea" placeholder="有什么想对商家说的可以在这里说哦~"/>          
+            </view>
+            <view class="left _contant_upload" bindtap="chooseImage">
+                <image src="../../img/photo.png"></image>
+            </view>
+            <view class="_contant_uploadimg" >
+            <view wx:for="{{files}}" wx:key="uploadimg">
+                <view class="_contant_uploadimgs">
+                <image class="_contant_img" src="{{item}}"></image>
+                <image class="close" src="../../img/xx12.png" bindtap="remove"data-index="{{index}}"></image>
+                </view>           
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="issue_contant">发布评价</view>
+</view>
+
+

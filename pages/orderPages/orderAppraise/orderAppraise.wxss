@@ -1,0 +1,27 @@
+/* pages/orderPages/orderAppraise/orderAppraise.wxss */
+._contant{padding: 30rpx;font-size: 30rpx;color: #111111;line-height: 48rpx}
+
+._contant_grade{margin-right: 50rpx}
+._contant_stars{margin-right: 70rpx}
+._contant_star{width: 52rpx;height: 48rpx;margin-right: 20rpx;position: relative}
+._contant_star image{width: 52rpx;height: 48rpx}
+._contant_s{position: absolute;left: 0;top: 0}
+
+._contant_head{width: 80rpx;height: 80rpx;}
+._contant_head image{width: 80rpx;height: 80rpx;}
+._contant_name{margin-left: 30rpx;line-height: 80rpx}
+
+/*._contant_text{margin-bottom: 20rpx}*/
+._contant_txt{width: 512rpx;height: 88rpx;background: #f7f7f7;border-radius: 8rpx;padding: 20rpx}
+._contant_txt textarea{width: 100%;height: 88rpx;font-size: 28rpx}
+._contant_upload{width: 128rpx;height: 128rpx;background: #f7f7f7;border-radius: 8rpx;margin-left: 10rpx}
+._contant_upload image{width: 44rpx;height: 36rpx;margin:42rpx 46rpx}
+._contant_uploadimg{display: flex;justify-content: flex-start;width: 100%;clear: both;padding-top: 19rpx;}
+._contant_uploadimgs{position: relative}
+
+._contant_img{width: 120rpx;height: 120rpx;padding: 0 9rpx;}
+
+.close{position: absolute;top: 0;right: 9rpx;width: 30rpx;height: 30rpx;}
+
+
+.issue_contant{width: 100%;height: 88rpx;text-align: center;background: #ff4c90;color: #fff;font-size: 30rpx;line-height: 88rpx;position: fixed;bottom: 0}

@@ -1,0 +1,41 @@
+<!--pages/orderPages/orderPay/orderPay.wxml-->
+<view class="container">
+    <view class="_contant_pay bmg">
+        <view class="_pay_times">
+            <view class="_pay_txt">支付剩余时间</view>
+            <view>{{clock}} {{micro_second}}</view>
+        </view>
+        <view class="_pay_info clear">
+            <view class="left">订单编号：2017 9934 9926 0014</view>
+            <view class="right _pay_moeny">需付款：<text>￥88</text></view>
+        </view>
+    </view>
+    <view class="_pay_way margint">
+        <view class="_pay_title">请选择支付方式</view>
+        <view class="_pay_main bmg">
+             <radio-group class="group" bindchange="checkboxChange">
+                <view class="clear goods_item"   wx:for="{{items}}" wx:key="gg">
+                      <view class="goods_img left">
+                        <image src="{{item.img}}"></image>
+                      </view>
+                      <view class="goods_text left">
+                          <view class="goods_title">{{item.title}}</view>
+                      </view>
+                      <view class="goods_check right" >
+                          <radio value="{{item.uuid}}" checked="{{item.checked}}"></radio>   
+                          <view class="label-icon">
+                              <view class="label_icon_checked" style="opacity:{{item.checked ? 1: 0}}">
+                                <image src="../../img/gou.png"></image>
+                              </view>
+                          </view>                
+                      </view>
+
+                      <!--<view class="goods-del" data-id="{{item.historyid}}" bindtap="del"></view>-->
+                  </view>
+              </radio-group>       
+        </view>
+    </view>
+    <view class="_contant_item_btn">
+确认支付
+    </view>  
+</view>

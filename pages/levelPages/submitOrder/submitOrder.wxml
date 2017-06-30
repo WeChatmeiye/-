@@ -1,0 +1,202 @@
+<!--pages/levelPages/submitOrder/submitOrder.wxml-->
+<view class="container">
+  <view class="_sub_info bmg">
+    <view class="_sub_item clear" bindtap="clickNameshow">
+      <view class="clear left _sub_person">
+        <view class="left _sub_lab">预约人:</view>
+        <view class="left _sub_name">
+          <input type="text" value="{{userName}}" disabled="false" placeholder="预约人" />
+        </view>
+      </view>
+      <view class="_sub_rightimg right">
+        <image src="../../img/right.png"></image>
+      </view>
+    </view>
+    <view class="_sub_item clear" bindtap="clickTimeshow">
+      <view class="clear left _sub_person">
+        <view class="left _sub_lab">服务时间:</view>
+        <view class="left _sub_name">
+          <input type="text" value="{{textTime}}" disabled="false" placeholder="服务时间" />
+        </view>
+      </view>
+      <view class="_sub_rightimg right">
+        <image src="../../img/right.png"></image>
+      </view>
+    </view>
+    <view class="_sub_item clear">
+      <view class="clear left _sub_person">
+        <view class="left _sub_lab">服务地址:</view>
+        <view class="left _sub_name">
+          <input type="text" value="{{textRess}}" disabled="false" placeholder="服务地址" />
+        </view>
+      </view>
+      <view class="_sub_rightimg right">
+        <image src="../../img/right.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="_wrap bmg margint">
+    <view class="_wrap_cant clear">
+      <view class="_name_img left">
+        <image src="../../img/Bitmap1.png"></image>
+      </view>
+      <view class="_person left">
+        <view class="_wrap_name">买衡力瘦脸送光子嫩肤</view>
+        <view class="_wrap_job">手艺人：安美</view>
+      </view>
+      <view class="_wrap_number right">
+        <view class="_wrap_price">￥
+          <text>218</text>
+        </view>
+        <view class="_wrap_num">X1</view>
+      </view>
+    </view>
+    <view class="_wrap_cant clear">
+      <view class="_buy_num left">
+        购买数量
+      </view>
+      <view class="_person left">
+        <view class="_buy_chase">限购1份</view>
+      </view>
+      <view class="right _buynum_nums">
+        <view class="left _buynum_sub">-</view>
+        <view class="left _buynum_num">1</view>
+        <view class="left _buynum_add">+</view>
+      </view>
+    </view>
+    <view class="_wrap_cant clear borderb">
+      <view class="_buy_note left">
+        备注：
+      </view>
+    </view>
+  </view>
+  <view class="_subBtn clear">
+    <view class="_pay_price left">
+      待支付：
+      <text class="textc">￥
+        <text>218</text>
+      </text>
+    </view>
+    <view class="_pay_now right">立即支付</view>
+  </view>
+</view>
+
+<!--名字电话-->
+<view class="_subName_cant" wx:if="{{isName}}">
+  <view class="_subName">
+    <view class="classname">
+      <view class="_public_main _public_title clear">
+        <text>给自己/朋友预约</text>
+        <view class="_public_titleimg right" bindtap="clickNamehide">
+          <image src="../../img/xx.png"></image>
+        </view>
+      </view>
+      <view class="_public_main _public_item clear">
+        <view class="_subName_img left">
+          <image src="../../img/users.png"></image>
+        </view>
+        <view class="_subName_text left">
+          <input type="text" placeholder="联系人" value="{{name}}" bindinput="userName" />
+        </view>
+      </view>
+      <view class="_public_main _public_item clear">
+        <view class="_subName_img left">
+          <image src="../../img/telephone.png"></image>
+        </view>
+        <view class="_subName_text left">
+          <input type="number" placeholder="手机号" value="{{phone}}" bindinput="userPhone" maxlength="11" />
+        </view>
+      </view>
+    </view>
+    <button class="_public_btn" bindtap="subName">确定</button>
+  </view>
+</view>
+
+
+<!--时间-->
+<view class="_subTime_cant" wx:if="{{isTime}}">
+  <view class="_subTime {{isRight ? 'isRight' : ''}}">
+    <view class="classname">
+      <view class="_public_main _public_title clear">
+        <text>给自己/朋友预约</text>
+        <view class="_public_titleimg right" bindtap="clickTimehide">
+          <image src="../../img/xx.png"></image>
+        </view>
+      </view>
+      <view class="clear _subTime_title">
+        <view class="_subTime_title_data left">
+          <scroll-view class="_subTime_title_items" scroll-x="true" scroll-left="{{scroll_left/2}}">
+            <block wx:for-items="{{times}}" wx:key="{{index}}">
+              <view id="{{index}}" class="_subTime_title_Item {{currentTab == index ? 'active' : ''}}" bindtap="navbarTap">
+                <view class="_subTime_title_day">{{item.day}}</view>
+                <view class="_subTime_title_date add" wx:if="{{item.isDate}}">可预约</view>
+                <view class="_subTime_title_date" wx:else>不可预约</view>
+              </view>
+            </block>
+          </scroll-view>
+        </view>
+        <view class="_subTime_title_days right" bindtap="clickRight">
+          <view class="_subTime_title_daysimg">
+            <image src="../../img/date.png"></image>
+          </view>
+          <view class="_subTime_title_text">30天</view>
+        </view>
+      </view>
+      <view class="_subTime_main">
+        <view class="_subTime_chooseNo" bindtap="clickChoose">
+          <view class="_subTime_choosetext">{{choosetext}}</view>
+          <view class="">{{daytext}}</view>
+          <view class="_active" wx:if="{{currentAdd == -1}}">
+            <image class="_activeimg" src="../../img/click.png"></image>
+          </view>
+        </view>
+        <view class="_subTime_time_items clear">
+          <view wx:for="{{hours}}" wx:key="{{index}}" class="_subTime_time_item left {{item.isable ? 'colorb' : ''}}">
+            <view id="{{index}}" wx:if="{{item.isable}}" class="{{currentAdd == index ? 'act' : ''}}" bindtap="clickHours">
+              <view>{{item.hours}}</view>
+              <view class="_active" hidden="{{currentAdd == index ? '':'true'}}">
+                <image class="_activeimg" src="../../img/click.png"></image>
+              </view>
+            </view>
+            <view wx:else>
+              <view>{{item.hours}}</view>
+              <view class="_item_text">暂不可约</view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+    <button class="_public_btn {{isRight ? 'isRight' : ''}}" bindtap="subTime">确定</button>
+  </view>
+  <view class="_subYears {{isLeft ? 'isLeft' : ''}}">
+    <view class="classname">
+      <view class="_public_main _serve_title clear">
+        <text>给自己/朋友预约</text>
+        <view class="_serve_titleimg left" bindtap="clickLeft">
+          <image src="../../img/left.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="_week_cant">
+      <view class="_week">日</view>
+      <view class="_week">一</view>
+      <view class="_week">二</view>
+      <view class="_week">三</view>
+      <view class="_week">四</view>
+      <view class="_week">五</view>
+      <view class="_week">六</view>
+    </view>
+    <view class="_subYears_items clear">
+      <view wx:for="{{years}}" wx:key="gg">
+        <view class="_subYears_item left year">{{item[0].year}}年{{item[0].month}}月</view>
+        <view class="_subYears_item left" style="margin-left:{{(item[0].week-1)*107}}rpx"></view>
+            <view wx:for-items="{{item}}" wx:key="{{index}}" id="{{index}}" class="_subYears_item left" bindtap="clickChecked">
+                <view>{{item.str}}</view>
+                <view>{{item.day}}</view>
+            </view>
+        </view>
+    </view>
+  </view>
+</view>

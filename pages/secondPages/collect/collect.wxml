@@ -1,0 +1,56 @@
+<!--pages/secondPages/collect/collect.wxml-->
+<view class="container">
+    <view class="_navbar_title bmg">
+        <view class="_navbar_item {{currentTab==0 ? 'active' : ''}}" data-idx="0" bindtap="navbarTap">项目</view>    
+        <view class="_navbar_item {{currentTab==1 ? 'active' : ''}}" data-idx="1" bindtap="navbarTap">匠人</view>          
+    </view>
+   <view class="_navbar_matter" wx:if="{{noItem}}">
+        <view wx:if="{{currentTab==0}}">  
+              <view class="_composite_item bmg clear" wx:for="{{composite}}" wx:key="gg">
+                  <view class="_composite_img left">
+                      <image src="{{item.img}}"></image>
+                  </view>
+                  <view class="_navbar_matter_content left">
+                      <view class="_navbar_matter_shop">{{item.shop}}</view>
+                      <view class="_navbar_matter_head clear">
+                          <view class="_navbar_matter_headimg left">
+                              <image src="{{item.head}}"></image>
+                          </view>
+                          <view class="_navbar_matter_name left">{{item.name}}</view>
+                      </view>
+                      <view class="_composite_info clear">
+                        <view class="_composite_price clear left">
+                          <view class="_composite_now left">￥<text>{{item.xz}}</text></view>
+                          <view class="_composite_former left">￥<text>{{item.yl}}</text></view>
+                        </view>
+                        <view class="_composite_like right">{{item.like}}人喜欢</view>
+                      </view>
+                  </view>                  
+             </view>   
+        </view> 
+        <view wx:if="{{currentTab==1}}">
+            <view class="_wrap_item bmg clear"  wx:for="{{wrap}}" wx:key="gg">
+                <view class="left clear">
+                    <view class="_name_img left">
+                      <image  src="{{item.head}}"></image> 
+                    </view>
+                    <view class="_person left"> 
+                      <view class="_wrap_name">{{item.name}}</view>
+                      <view class="_wrap_job">{{item.job}}</view> 
+                      <view class="_wrap_star"><image  src="{{item.star}}"></image> </view>
+                    </view>                 
+                </view>
+                <view class="right">
+                  <view class="_wrap_btn">今日可约</view>
+                </view>
+            </view>
+        </view>  
+  <view class="_lookover bmg margint" bindtap="clickLookover">
+  查看更多改商户项目
+  </view>        
+    </view> 
+    <view wx:else class="_navbar_matter_no">
+        <image src="../../img/search_nspace.png"></image>
+        <view class="classname">没有搜索到相关宝贝</view>
+    </view>     
+</view>

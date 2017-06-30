@@ -1,0 +1,32 @@
+<!--pages/levelPages/newAddress/newAddress.wxml-->
+<view class="container">
+    <view class="_city bmg margint clear">
+        <view class="_cityimg left"><image src="../../img/adress2.png"></image></view>
+        <view class="left">宁波市</view>
+    </view>
+    <view class="_detail bmg margint clear">
+        <view class="_detailtxt left">地址</view>
+        <view class="_detailinput left">
+           <view class="_detailinput_f"><input  placeholder="您所在的城市的小区/大厦或街道名"/></view>
+           <view class="classname"><input  placeholder="详细地址，如：1号楼6单元408"  /></view>
+        </view>
+    </view>
+    <checkbox-group class="group" bindchange="checkboxChange">
+    <view class="clear goods_item"   wx:for="{{items}}">
+          <view class="goods_check left" >
+              <checkbox value="{{uuid}}" checked="{{item.checked}}"></checkbox>   
+              <view class="label-icon">
+                  <view class="label_icon_checked" style="opacity:{{item.checked ? 1: 0}}">
+                    <image src="../../img/gou.png"></image>
+                  </view>
+              </view>                
+          </view>                
+          <view class="goods_text left">
+              <view class="goods_title">{{item.title}}<text>(选中后在提交订单页将自动填入)</text></view>
+          </view>
+
+
+      </view>
+  </checkbox-group>
+  <view class="_add_btn">保存</view>
+</view>

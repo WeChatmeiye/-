@@ -1,0 +1,65 @@
+<!--pages/store/store.wxml-->
+<view class="container">
+    <view class="store_search_cont">
+        <view class="store_search_input">
+          <input type="text" placeholder="韩式美甲"/>          
+          <view class="store_search_icon">
+            <image src="../../img/picture.png"></image>
+          </view>
+        </view>
+    </view>
+   <view class="margint">
+      <view class="_navbar_title bmg">
+          <view class="_navbar_item {{currentTab==0 ? 'active' : ''}}" data-idx="0" bindtap="navbarTap">
+          综合排序
+              <view class="_navbar_icon four"><image src="../../img/turndown.png"></image></view>
+
+          </view>    
+          <view class="_navbar_item {{currentTab==1 ? 'active' : ''}}" data-idx="1" bindtap="navbarTap">         
+             销量
+              <view class="_navbar_icon"><image src="../../img/turndown.png"></image></view>
+
+          </view>   
+          <view class="_navbar_item {{currentTab==2 ? 'active' : ''}}" data-idx="2" bindtap="navbarTap">
+          筛选
+              <view class="_navbar_icon screen"><image src="../../img/screen.png"></image></view>
+          </view>         
+      </view>
+      <view class="_navbar_matter" wx:if="{{isNo}}">
+        <view wx:if="{{currentTab==0}}" class="_composite clear">  
+            <view class="_composite_item left bmg" wx:for="{{composite}}" wx:key="gg">
+                 <view class="_composite_img"><image src="{{item.img}}"></image></view>
+                 <view class="_composite_cant">
+                    <view class="_composite_name">{{item.name}}</view>
+                    <view class="_composite_info clear">
+                      <view class="_composite_price clear left">
+                        <view class="_composite_now left">￥<text>{{item.xz}}</text></view>
+                        <view class="_composite_former left">￥<text>{{item.yl}}</text></view>
+                      </view>
+                      <view class="_composite_like right">{{item.like}}人喜欢</view>
+                    </view>
+                 </view> 
+                 <view class="_composite_item_head clear">
+                      <view class="_composite_item_img left"><image src="{{item.head}}"></image></view>
+                      <view class="left">{{item.personName}}</view>
+                 </view>              
+            </view>
+        </view>  
+
+        <view wx:if="{{currentTab==1}}" class="_composite clear">  
+            <view class="_composite_item left" wx:for="{{composite}}" wx:key="gg">
+                 <view class="_composite_img"><image src="{{item.img}}"></image></view>
+            </view>
+        </view> 
+        <view wx:if="{{currentTab==2}}">  
+          评价  
+        </view> 
+      </view> 
+      <!--未搜索到-->
+      <view wx:else class="_navbar_matter_no">
+          <image src="../../img/search_nspace.png"></image>
+          <view class="classname">没有搜索到相关宝贝</view>
+      </view>   
+    </view>  
+ 
+</view>

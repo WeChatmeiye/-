@@ -1,0 +1,87 @@
+/* pages/levelPages/goods/goods.wxss */
+.container{padding-bottom: 120rpx;}
+.swiper-container{position: relative;background: red}
+.swiper-container .swiper{height: 750rpx;}
+.swiper .bannerImg{ width: 100%;height: 100%;}
+
+._wrap_cant{padding: 12rpx 30rpx 24rpx 30rpx;position: relative;border-bottom: 1rpx solid #f8f8f8;}
+._name_img{width: 120rpx;height: 120rpx;border-radius: 50%;position: absolute;left: 30rpx;top:-30rpx;border:solid 6rpx #ffffff;}
+._name_img image{width: 120rpx;height: 120rpx;}
+._person{margin-left: 160rpx;}
+._wrap_name{line-height: 46rpx;font-size: 32rpx;font-weight: bold;color: #111111}
+._wrap_job{margin-top: 10rpx;margin-left: 20rpx;}
+._wrap_star{margin-top: 20rpx;}
+._wrap_star image{width: 180rpx;height: 30rpx;}
+._wrap_btn{width: 180rpx;height: 68rpx;border:solid #FF4C90 1rpx;text-align: center;line-height:68rpx;border-radius: 100rpx;margin-top: 36rpx;}
+
+._composite_cant{padding: 30rpx;border-bottom: 1rpx solid #f8f8f8;}
+._composite_name{line-height: 42rpx;font-size: 30rpx;color: #111111}
+._composite_info{margin-top: 30rpx;color: #999999;}
+._composite_now{color: #FF4C90}
+._composite_price{font-size: 22rpx;}
+._composite_now{color:#FF4C90}
+._composite_now text{line-height: 48rpx;font-size: 30rpx;font-weight: bold}
+._composite_former{margin-left: 10rpx;text-decoration:line-through}
+._composite_former text{line-height: 52rpx;}
+._buynum_cant{padding: 30rpx;font-size: 24rpx;line-height: 56rpx;}
+._buynum_text{font-size: 28rpx;color: #111111}
+._buynum_sub{width: 56rpx;height: 56rpx;border-radius: 50%;border:solid 1rpx #FF4C90;color: #FF4C90;line-height: 56rpx;text-align: center}
+._buynum_add{width: 56rpx;height: 56rpx;border-radius: 50%;border:solid 1rpx #FF4C90;color: #fff;line-height: 56rpx;text-align: center;background: #FF4C90}
+._buynum_nums view{margin-left: 40rpx;}
+._sts_title{padding: 28rpx 30rpx;border-bottom: 1rpx solid #f8f8f8;}
+._star{line-height: 42rpx;font-size: 28rpx;color: #666666;}
+._more .text{color: #999999;margin-right: 10rpx;}
+._more image{width: 10rpx;height: 20rpx;margin-top:7rpx; }
+._location_info{width: 568rpx;padding: 24rpx 30rpx;position: relative}
+._location_store{font-weight: bold;margin-bottom: 20rpx;}
+._location_time{margin-top: 4rpx;}
+._location_distance{position: absolute;color: #999999;right: 30rpx;top:50%;margin-top: -20rpx;}
+._location_distance_img image{width: 30rpx;height: 34rpx;margin-right: 20rpx;}
+._location_phone{border-left: 1rpx solid #f8f8f8;padding: 69rpx 36rpx;}
+._location_phone image{width:40rpx;height: 40rpx; }
+._nodate{margin-left: 30rpx;line-height: 42rpx}
+._nodate_img{margin-top: 6rpx;}
+._nodate_img image{width: 24rpx;height: 24rpx;margin-right: 10rpx;}
+._date{margin-left: 30rpx;line-height: 42rpx}
+._date_img{margin-top: 6rpx;}
+._date_img image{width: 24rpx;height: 24rpx;margin-right:10rpx;}
+
+._data_text{color: #999999}
+._data_txt{margin-left:30rpx;margin-right: 22rpx }
+._data_text ._data_time{margin-left:52rpx; }
+._data_text ._data_time_f{margin-left:0;}
+._date_top{position: relative;height: 60rpx;padding-top: 30rpx;}
+._date_topimg{position: absolute;bottom: 0;left: 0;right: 0}
+._date_topimg image{width: 750rpx;height: 10rpx;}
+
+._data_bottom{padding: 30rpx 0}
+._date_txt{margin-left: 30rpx;}
+._data_bottomimg{width: 24rpx;height: 24rpx;}
+._data_bottomimg image{width: 24rpx;height: 24rpx;}
+._date_img{margin-left: 26rpx;}
+
+
+
+.details{color:#999999}
+._details_info{padding: 24rpx 30rpx 20rpx; line-height: 40rpx; font-size: 28rpx;color: #111111}
+._details_cant{width: 200rpx;}
+._details_cant >view{margin-bottom: 20rpx; }
+._sts_bord{border-top: 2rpx solid #f8f8f8}
+._look{ color: #FF4C90}
+
+._eval_info{padding: 24rpx 30rpx 20rpx;line-height: 40rpx;}
+._eval_head{width: 80rpx;height: 80rpx;margin-bottom:20rpx; }
+._eval_head image{width: 80rpx;height: 80rpx;}
+._eval_cant{margin-left: 30rpx;line-height: 40rpx;}
+._eval_name{font-size:28rpx;color: #999999}
+._eval_manner{color: #FF4C90}
+._eval_matter{margin-top: 20rpx;margin-bottom: 20rpx;font-size: 28rpx;color: #111111}
+._eval_time{color: #999999}
+._eval_time text{color: #FF4C90}
+
+._goods_btn{height: 98rpx;background:#ffffff;position: fixed;bottom: 0;left: 0;right: 0}
+._goods_coll{width: 140rpx;text-align: center}
+._goods_collimg{width: 50rpx;height: 46rpx;margin:10rpx 45rpx 6rpx 45rpx;}
+._goods_collimg image{width: 50rpx;height: 46rpx;}
+
+._goods_buy{background: #FF4C90;width: 610rpx;line-height: 98rpx;color: #fff;font-size: 32rpx;text-align: center}

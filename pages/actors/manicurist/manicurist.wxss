@@ -1,0 +1,63 @@
+/* pages/actors/manicurist/manicurist.wxss */
+._navbar_title{line-height: 98rpx;text-align: center;font-size: 30rpx;display: flex;}
+._navbar_item{flex:1;display: flex;justify-content: center;align-items:center;}
+._navbar_icon{width: 18rpx;height:104rpx;margin-left: 10rpx}
+._navbar_icon image{width: 18rpx;height: 10rpx}
+.screen{width: 24rpx;height: 98rpx;}
+.screen image{width: 24rpx;height: 24rpx;}
+._navbar_item_icon image{width: 18rpx;height: 10rpx;}
+._navbar_title .active{color: #FF4C90;position: relative} 
+._wrap_item{padding: 30rpx;margin-bottom: 20rpx;}
+._name_img{width: 140rpx;height: 140rpx;border-radius: 50%}
+._name_img image{width: 140rpx;height: 140rpx;}
+._person{width: 330rpx;margin-left: 30rpx;}
+._wrap_name{line-height: 46rpx;font-size: 32rpx;font-weight: bold}
+._wrap_job{margin-top: 16rpx;}
+._wrap_star{margin-top: 20rpx;}
+._wrap_star image{width: 33rpx;height: 32rpx;}
+._wrap_grade{height:32rpx;line-height: 32rpx;display: inline-block;font-size: 22rpx;margin-left: 10rpx;}
+._wrap_btn{width: 180rpx;height: 68rpx;border:solid #FF4C90 1rpx;text-align: center;line-height:68rpx;border-radius: 100rpx;margin-top: 36rpx;color: #FF4C90}
+._navbar_synthesize{
+  top: 98rpx;left: 0; border-top: solid 1px #eeeeee;height: calc(100vh - 98rpx);background: rgba(0, 0, 0, 0.4)
+}
+.gou{
+  width: 30rpx;height: 20rpx;
+}
+._navbar_synthesize_item{
+  justify-content: space-between;
+  border-bottom: solid 1px #eeeeee;
+  height: 115rpx;line-height: 115rpx;
+}
+.container .pos-f{top: 98rpx;}
+
+
+/*筛选*/
+.filtrate{
+  width: 750rpx;background: rgba(0, 0, 0, 0.5);height: 100vh;padding-left: 100rpx;
+  
+}
+.filtrate .pos-f{
+  top: 0;
+}
+.filtrate_cont{
+  width: 100%;height: 100%;
+}
+.filtrate_cont_top{width: 650rpx; height: 98rpx;line-height: 98rpx;border-bottom: 1px solid #eeeeee;position: fixed;top: 0;right: 0;}
+.close{width: 222rpx;}
+.close image{width: 30rpx;height: 30rpx;padding:30rpx;}
+.filtrate_cont_top_title{width: 428rpx;}
+.filtrate_cont_main{width: 100%;padding: 98rpx 0;}
+.filtrate_cont_main_left{width:222rpx;min-height: calc(100vh - 196rpx);background: #f7f7f7; }
+.filtrate_cont_main_left_list{height: 88rpx;line-height: 88rpx;width: 100%;padding-left: 26rpx;border-left: 2px #f7f7f7 solid;}
+.filtrate_cont_main_left_list.on{border-left: 2px solid #FF4C90;color: #FF4C90;}
+.filtrate_cont_main_right{margin-left: 40rpx;width: 358rpx;}
+.filtrate_cont_main_right_list{height: 88rpx;line-height: 88rpx;border-bottom: 1px dashed #eeeeee;justify-content: space-between;}
+.filtrate_cont_main_right_list image{
+  width: 30rpx;height: 20rpx;
+}
+.filtrate_cont_main_right_list.on{
+  color: #FF4C90;
+}
+.filtrate_cont_bottom{width: 650rpx; height: 98rpx;line-height: 98rpx;position: fixed;right: 0;bottom: 0;}
+.empty{width: 222rpx;}
+.submit{width: 428rpx;background: #FF4C90;}

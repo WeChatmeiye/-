@@ -1,0 +1,89 @@
+<!--pages/clubCard/clubCard.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit">
+
+    <view class="clubCard_list">
+      <view class="clubCard_list_title">姓名：</view>
+      <view class="clubCard_list_contont">
+        <input name="username" placeholder="请输入您的姓名" />
+      </view>
+    </view>
+    <view class="clubCard_list">
+      <view class="clubCard_list_title">手机号码：</view>
+      <view class="clubCard_list_contont">
+        <input placeholder="请输入您的手机号码" bindfocus="phone" />
+      </view>
+    </view>
+    <view class="clubCard_list">
+      <view class="clubCard_list_title">性别：</view>
+      <view class="clubCard_list_contont">
+        <radio-group name="gender">
+          <radio value="男" checked="{{man}}" />
+          <radio value="女" checked="{{!man}}" />
+          <view class="gender display-flex box-s mt20 txt-c">
+            <view class="man  {{man ? 'on' :'' }}" bindtap="gender">男</view>
+            <view class="man {{!man ? 'on' :'' }}" bindtap="gender">女</view>
+          </view>
+        </radio-group>
+      </view>
+    </view>
+    <view class="clubCard_list">
+      <view class="clubCard_list_title">所在城市：</view>
+      <view class="clubCard_list_contont" bindtap="cityProvince">
+        {{city}}
+      </view>
+    </view>
+    <view class="clubCard_list">
+      <view class="clubCard_list_title">生日：</view>
+      <view class="clubCard_list_contont" bindtap="birthdayshow">
+        {{birthday}}
+      </view>
+    </view>
+    <view class="pos-f txt-c ft28 c3c w-100" wx:if="{{cityShow}}">
+      <view class="w-100 bg-wt">
+        <view class="display-flex w-100 picker_header box-s">
+          <view class="txt-left" bindtap="cityCancel">取消</view>
+          <view class="txt-right confirm" bindtap="cityConfirm">确定</view>
+        </view>
+      </view>
+      <picker-view class="" indicator-style="height: 50px;" style="width: 100%; height: 524rpx;" value="{{value}}" bindchange="bindChange" name="city">
+
+        <picker-view-column>
+          <view wx:for="{{provinces}}" style="line-height: 50px">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{citys}}" style="line-height: 50px">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{countys}}" style="line-height: 50px">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+    <view class="pos-f txt-c ft28 c3c w-100" wx:if="{{birthdayshow}}">
+      <view class="w-100 bg-wt">
+        <view class="display-flex w-100 picker_header box-s">
+          <view class="txt-left" bindtap="birthdayCancel">取消</view>
+          <view class="txt-right confirm" bindtap="birthdayConfirm">确定</view>
+        </view>
+      </view>
+      <picker-view class="" indicator-style="height: 50px;" style="width: 100%; height: 524rpx;" value="{{values}}" bindchange="birthday" name="birthday">
+
+        <picker-view-column>
+          <view wx:for="{{years}}" style="line-height: 50px">{{item}}年</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+     <button formType="submit" class="draw txt-c ft32">
+  领取到卡包
+  </button>
+  </form>
+
+
+ 
+</view>
