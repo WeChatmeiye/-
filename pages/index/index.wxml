@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<view class="containerrrr">
   <view class="contant clear">
       <view class="left index_scan">
           <image src="../img/vipcard.png"></image>
