@@ -2,15 +2,24 @@
 <view class="container">
   <view class="contant clear">
       <view class="left index_scan">
-          <image src="../img/vipcard.png"></image>
-          <view class="text">扫一扫</view>
+          <image src="../img/vipcard.png" bindtap="vipCard"></image>
+          <view class="cardNumber ft" wx:if="{{userStatus}}">{{cardNumber}}</view>
+          <view class="text" wx:if="{{userStatus}}">扫一扫</view>
       </view>
+      
       <view class="right index_project">
+          <view class="" wx:if="{{userStatus}}"><!--会员的样式-->
           <view class="text index_vip" bindtap="clickCard">VIP会员</view>
           <view class="text index_rank">目前等级lv.15</view>
           <view class="text index_discount">极限：单笔订单不超过100享受8折</view>
+          </view>
+          
+          <view class="w-100" wx:else><!--领取会员卡-->
+                <view class="draw ft32 txt-c w-100">领取会员卡</view>
+                <view class="w-100 txt-c ft22 draw_title">快来领取你的专属会员卡~</view>
+          </view>
           <view class="index-nav">
-              <view class="index-item">
+              <view class="index-item" wx:if="{{userStatus}}">
                 <image src="../img/card.png"></image>
                 <text>个人信息</text>
               </view>
@@ -52,7 +61,11 @@
                 <view class="index_person left"> 
                   <view class="index_wrap_name">{{item.name}}</view>
                   <view class="index_wrap_job">{{item.job}}</view> 
-                  <view class="index_wrap_star"><image  src="{{item.star}}"></image> </view>
+                  <view class="index_wrap_star display-flex" >
+                  <blcok wx:for="{{item.count}}"  wx:for-item="itemName" wx:key="count">
+                  <image  src="{{item.star}}"></image> 
+                  </blcok>
+                  </view>
                  </view> 
               </view>   
           </view>     
@@ -127,12 +140,13 @@
     </view>
 </view>
 <!--未领取会员卡dialog-->
+
 <view class="mendbackg" wx:if="{{vipCard}}">
     <view class="mendDialog">
       <view class="vipDialog_hint">
           <view>您还未领取会员卡，</view>
           <view>会员卡功能咱不能使用！</view>
       </view>
-      <view class="vipDialog_confirm">确定</view>
+      <view class="vipDialog_confirm" bindtap="vipCard_confirm">确定</view>
     </view>
 </view>

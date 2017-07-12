@@ -4,9 +4,9 @@ var app = getApp()
 Page({
   data: {
     name:[
-      { uuid: "1", img: "../img/picture.png", name: "席友梅", job: "美甲师", star: "../img/picture.png" },
-      { uuid: "1", img: "../img/picture.png", name: "席友梅", job: "美甲师", star: "../img/picture.png" },
-      { uuid: "1", img: "../img/picture.png", name: "席友梅", job: "美甲师", star: "../img/picture.png" },
+      { uuid: "1", img: "../img/head1.png", name: "席友梅", job: "美甲师", star: "../img/start1.png", count: 3,},
+      { uuid: "1", img: "../img/head2.png", name: "席友梅", job: "美甲师", star: "../img/start1.png", count: 4, },
+      { uuid: "1", img: "../img/head3.png", name: "席友梅", job: "美甲师", star: "../img/start1.png", count: 5, },
     ],
     currentTab: 0,
     composite: [
@@ -17,7 +17,9 @@ Page({
     mendTitle:"Bullet韩式美甲",
     mendMatter:"buller韩式美甲，韩国保植物catsby甲油胶，透光性好，欢迎各位小主前来韩式美甲小店！我的小店开业啦！我将以五星的服务和技术出现在我的小主面前，擅长光疗延长甲，损坏免费上门修补！",
     recommendDisplay:false,
-    vipCard:false
+    vipCard:false,
+    userStatus:0,
+    cardNumber: "1776 7375 0074"
   },
   //综合销量评价切换
   navbarTap: function (e) {   
@@ -62,5 +64,18 @@ Page({
       url: '../secondPages/collect/collect'
     })
   },
-
+  // 领取会员卡
+  vipCard(e){
+    if (!this.data.vipCard){
+      this.setData({
+        vipCard: true
+      })
+    }
+     
+  },
+  vipCard_confirm(e){
+    this.setData({
+      vipCard: false
+    })
+  }
 })
