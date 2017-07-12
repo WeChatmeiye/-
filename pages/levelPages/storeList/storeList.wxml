@@ -4,7 +4,6 @@
       <view class="_location_info left">
           <view class="_location_store">{{item.name}}</view>
           <view class="_location_site">{{item.ress}}</view>
-          <view class="_location_time">{{item.time}}</view>
           <view class="_location_distance clear">
               <view class="left _location_distance_img"><image src="{{item.icon}}"></image></view>
               <view class="left">58米</view>

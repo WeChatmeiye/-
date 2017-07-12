@@ -1,0 +1,43 @@
+<!--pages/actors/addressList/addressList.wxml-->
+<view class="container">
+      <view class="_navbar_title bmg clear">
+          <view class="left">请选择您要查看的地区</view>
+          <view class="_navbar_item right clear" bindtap="cityProvince">
+              <view class="left">筛选</view> 
+              <view class="_navbar_icon screen left"><image src="../../img/screen.png"></image></view>
+          </view>         
+      </view>
+    <view class="margint">
+        <view class="_location clear bmg" wx:for="{{list}}" wx:key="gg">
+          <view class="_location_info left">
+              <view class="_location_store">{{item.name}}</view>
+              <view class="_location_site">{{item.ress}}</view>
+              <view class="_location_distance clear">
+                  <view class="left _location_distance_img"><image src="{{item.icon}}"></image></view>
+              </view>
+          </view>     
+        </view> 
+    </view>    
+</view>   
+
+    <view class="pos-f txt-c ft28 c3c w-100" wx:if="{{cityShow}}">
+      <view class="w-100 bg-wt">
+        <view class="display-flex w-100 picker_header box-s">
+          <view class="txt-left" bindtap="cityCancel">取消</view>
+          <view class="txt-right confirm" bindtap="cityConfirm">确定</view>
+        </view>
+      </view>
+      <picker-view class="" indicator-style="height: 50px;" style="width: 100%; height: 524rpx;" value="{{value}}" bindchange="bindChange" name="city">
+
+        <picker-view-column>
+          <view wx:for="{{provinces}}" style="line-height: 50px">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{citys}}" style="line-height: 50px">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{countys}}" style="line-height: 50px">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>    
+
