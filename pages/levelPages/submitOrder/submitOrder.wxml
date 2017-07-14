@@ -59,7 +59,7 @@
         <view class="_buy_chase">限购1份</view>
       </view>
       <view class="right _buynum_nums">
-        <view class="left _buynum_sub">-</view>
+        <view class="left _buynum_sub" bindtap="bindMinus">-</view>
         <view class="left _buynum_num">1</view>
         <view class="left _buynum_add">+</view>
       </view>

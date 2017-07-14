@@ -1,3 +1,5 @@
 page{background: #fff}
 .weui-bar__item_on{color: red}
 rich-text{width: 700rpx;background: red}
+.nodes img{width:100%}
+.nodes image{width:100%}

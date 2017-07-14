@@ -1,5 +1,6 @@
 <!--logs.wxml-->
-<view class="classname" style="width:700rpx;margin:auto">
+
+<view class="classname" style="width:700rpx;margin:auto;">
 <rich-text nodes="{{nodes}}"></rich-text>
-</view>>
+</view>
 

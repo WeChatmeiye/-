@@ -1,7 +1,7 @@
 /**index.wxss**/
 .contant{margin: 10rpx; height: 494rpx;background: #141414;position: relative}
 .index_scan{margin-top: 40rpx;margin-left:40rpx;position: relative;width: 264rpx;height: 424rpx;overflow: hidden;border-radius: 16rpx}
-.index_scan image{width: 264rpx;height: 424rpx}
+.index_scan_image{width: 264rpx;height: 424rpx}
 .cardNumber{position: absolute;top: 70rpx;left: -60rpx;transform: rotate(-90deg);font-family: PingFangSC-Medium;font-size: 22rpx;color: #FFFFFF;letter-spacing: 0;}
 .index_scan .text{position: absolute;line-height: 30rpx;color: #fff ;background: #f19abd;display:block;bottom: 0;width: 264rpx;text-align: center }
 .index_project{width: 380rpx;color: #fff;margin-top:40rpx;margin-right: 20rpx; text-align: center;margin-left: 20rpx; }
@@ -10,23 +10,23 @@
 .index_discount{line-height: 28rpx;font-size: 22rpx;margin-bottom: 60rpx;}
 .index-nav{display: flex}
 .index-item{flex: 1;text-align: center}
-.index-item image{width: 80rpx;height: 80rpx}
+.index-item_image{width: 80rpx;height: 80rpx}
 .index-item text{display: block;margin-top: 40rpx;}
 .index_recommend{padding: 30rpx}
-.index_brand image{width: 120rpx;height: 120rpx;}
+.index_brand_image{width: 120rpx;height: 120rpx;}
 .index_mend{margin-left: 30rpx;}
 .index_mend_title{line-height:46rpx;font-size: 32rpx;color: #111111;font-weight: bold;margin-bottom: 20rpx; }
 .index_mend_matter{overflow: hidden;text-overflow:ellipsis;white-space: nowrap;width:540rpx;color: #666666}
 .index_sts_title{padding: 28rpx 30rpx;border-bottom: 1rpx solid #f8f8f8;}
 .index_star{line-height: 42rpx;font-size: 30rpx;color: #111111;font-weight: bold}
 .index_more .text{color: #999999;margin-right: 10rpx;}
-.index_more image{width: 10rpx;height: 20rpx;margin-top:7rpx; }
+.index_more_image{width: 10rpx;height: 20rpx;margin-top:7rpx; }
 .index_wrap{width:100%; display: flex;}  
 .index_wrap_item{width: 360rpx;}
 .index_name{flex: 1;border-right:solid 1rpx #f8f8f8;padding: 30rpx;}
 .index_name:last-child{border-right: none}
 .index_name_img{width: 140rpx;height: 140rpx;border-radius: 50%;overflow: hidden}
-.index_name_img image{width: 140rpx;height: 140rpx;}
+.index_name_img_image{width: 140rpx;height: 140rpx;}
 .index_person{width: 190rpx;margin-left: 30rpx;}
 .index_wrap_name{line-height: 46rpx;font-size: 32rpx;font-weight: bold}
 .index_wrap_job{margin-top: 16rpx;}

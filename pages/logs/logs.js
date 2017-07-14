@@ -51,9 +51,9 @@ Page({
   onLoad(){
     var that = this
     wx.request({
-      url: 'http://gw.vdongchina.com/wMcQKvDmQdKypP0uiYr/basic/mgt/imagetext/select/id', //仅为示例，并非真实的接口地址
+      url: 'http://gw-test.vdongchina.com/111/basic/mgt/imagetext/select/id', //仅为示例，并非真实的接口地址
       data: {
-        id:8
+        id:3
       },
       method:"POST",
       header: {

@@ -2,17 +2,6 @@
 <view class="container">
 	<view class="_navbar_title bmg pos-r">
 		<view class="_navbar_item {{currentTab==index ? 'active' : ''}}" data-idx="{{index}}">
-			<!--<view class="_navbar_text">{{item}}</view>
-      <view class="_navbar_icon" wx:if="{{index == 0}}">
-      	<image src="../../img/{{currentTab==index ? 'up':'turndown'}}.png"></image>
-      </view>	
-      <view class="_navbar_icon" wx:if="{{index == 1 && currentTab == 1}}">
-        <image src="../../img/{{currentTabs ? 'up':'down'}}.png"></image>
-      </view>
-      <view class="_navbar_icon" wx:if="{{index!=2}}">
-<<<<<<< HEAD
-        <image src="../../img/{{currentTabs==index ? 'up':'turndown'}}.png"></image>
-      </view>-->
 			<view class="_navbar_item {{currentTab==0 ? 'active' : ''}}" data-idx="0" bindtap="navbarTap">
 				<view class="_navbar_text"> 综合排序</view>
 				<view class="_navbar_icon">
@@ -67,7 +56,8 @@
 			<view class="_wrap_btn">今日可约</view>
 		</view>
 	</view>
-=======
+  <view>
+    <view>
         <image src="../../img/{{currentTab==index ? 'up':'turndown'}}.png"></image>
       </view>
       <view class="_navbar_icon screen" wx:else>
@@ -106,7 +96,6 @@
       <view class="_wrap_btn">今日可约</view>
     </view>
   </view>
->>>>>>> d017cfa82c2360b9a03a0b3ed5c30f13df49b0e9
 </view>
 
 <view class="filtrate pos-f w-100 box-s" wx:if="{{filtrateShow}}">
