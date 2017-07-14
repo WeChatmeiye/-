@@ -1,0 +1,166 @@
+<!--pages/actors/manicuristIndex/manicuristIndex.wxml-->
+<view class="container">
+    <view class="_contant">
+        <image src="../../img/personbg.png"></image> 
+        <view class="_wrap_item clear">
+            <view class="left clear">
+                <view class="_name_img left">
+                  <image  src="../../img/head1.png"></image> 
+                </view>
+                <view class="_person left"> 
+                  <view class="_wrap_name">席友梅</view>
+                  <view class="_wrap_job">美甲师</view> 
+                  <view class="_wrap_star"><image  src="../../img/picture.png"></image> </view>
+                </view>                 
+            </view>
+            <view class="right">
+              <view class="_wrap_btn">关注</view>
+            </view>
+        </view>          
+    </view>
+    <view class="_recommend bmg clear" bindtap="clickRecommend">
+      <view class="left _brand">
+        <image src="../../img/person.png"></image>
+      </view>
+      <view class="left _mend">
+        <view class="_mend_matter">席由美承诺，服务的过程中绝不推销，强卖卡项，
+认真服务，会用百分之两百的态度为您服务
+店铺所有护理不偷工，不减料，工作守时，从不不减料，工作守时，从不不减料，工作守时，从不不减料，工作从不</view>
+      </view>
+    </view> 
+    <view class="_sts bmg margint">
+        <view class="_sts_title clear">
+          <view class="_star left">可约时间</view>
+          <view class="right clear _more" bindtap="showTime">
+            <view class="right"><image src="../../img/right.png"></image></view> 
+            <view class="text right">查看30天</view>     
+          </view>
+        </view>  
+     </view>  
+
+    <view class="_add_cant clear bmg margint">
+        <view class="_cant_door left "  data-idx="0" bindtap="navbarTap">
+              <view class="_cant_item  {{currentTab==0 ? 'active' : ''}}">
+                <view class="_cant_doorimg" wx:if="{{currentTab==1}}"><image src="../../img/service2.png"></image></view>
+                <view class="_cant_doorimg" wx:else><image src="../../img/service1.png"></image></view>
+                <view class="_cant_txt">可服务项目</view>
+              </view>  
+        </view>
+        <view class="_cant_shop right "  data-idx="1" bindtap="navbarTap">
+              <view class="_cant_item {{currentTab==1 ? 'active' : ''}}">
+                <view class="_cant_shopimg" wx:if="{{currentTab==0}}"><image src="../../img/evaluate1.png"></image></view>
+                <view class="_cant_shopimg" wx:else><image src="../../img/evaluate2.png"></image></view>
+                <view class="_cant_txt">顾客评价</view>    
+             </view>       
+        </view>
+    </view>  
+    <view class="margint">
+        <view class="goods_list clear" wx:if="{{currentTab==0}}">
+            <view class="_composite_item left bmg" wx:for="{{composite}}" wx:key="gg">
+                 <view class="_composite_img"><image src="{{item.img}}"></image></view>
+                 <view class="_composite_cant">
+                    <view class="_composite_name">{{item.name}}</view>
+                    <view class="_composite_info clear">
+                      <view class="_composite_price clear left">
+                        <view class="_composite_now left">￥<text>{{item.xz}}</text></view>
+                        <view class="_composite_former left">￥<text>{{item.yl}}</text></view>
+                      </view>
+                      <view class="_composite_like right">{{item.like}}人喜欢</view>
+                    </view>
+                 </view> 
+                 <view class="_composite_item_head clear">
+                      <view class="_composite_item_img left"><image src="{{item.head}}"></image></view>
+                      <view class="left">{{item.personName}}</view>
+                 </view>              
+            </view>        
+        </view>       
+        <view class="goods_list bmg" wx:if="{{currentTab==1}}">
+          <view class="_me_title_items">
+            <view class="_me_title_item" wx:for-items="{{items}}" wx:key="{{index}}">
+              <view id="{{index}}" class="_me_title_Item {{addTab == index ? 'active' : ''}}" bindtap="navitemTap">
+                <view>{{item.status}}</view>
+                <view class="nub">{{item.num}}</view>
+              </view>
+            </view>
+          </view>
+            <view class="_eval_info">
+                <view class="clear">
+                    <view class="_eval_head left">
+                        <image src="../../img/head1.png"></image>
+                    </view>
+                    <view class="left _eval_cant">
+                        <view class="_eval_name">关雎尔</view>
+                        <view class="_eval_manner">超出期待</view>
+                    </view>
+                </view>
+                <view class="_eval_matter">做的不错</view>
+                <view class="clear _eval_time">
+                    <view class="left">2017-05-08 15:70</view>
+                    <view class="right">购买项目：<text>春季条色素</text></view>
+                </view>
+            </view>  
+            <view class="_eval_info">
+                <view class="clear">
+                    <view class="_eval_head left">
+                        <image src="../../img/head1.png"></image>
+                    </view>
+                    <view class="left _eval_cant">
+                        <view class="_eval_name">关雎尔</view>
+                        <view class="_eval_manner">超出期待</view>
+                    </view>
+                </view>
+                <view class="_eval_matter">做的不错</view>
+                <view class="clear _eval_time">
+                    <view class="left">2017-05-08 15:70</view>
+                    <view class="right">购买项目：<text>春季条色素</text></view>
+                </view>
+            </view>                                
+        </view>           
+    </view> 
+    <view class="_sts_title _sts_bord clear">
+      <view class="_star _look">查看更多评论</view>
+    </view>           
+</view>
+
+<!--可约时间-->
+<view class="_time_cant" wx:if="{{isTime}}">
+      <view class="_time">
+          <view class="_time_title">
+            <view class="_public_main _public_title clear">
+                  <text>近30天可预约时间</text>
+                  <view class="_public_titleimg right" bindtap="hideTime">
+                    <image src="../../img/xx.png"></image>
+                  </view>
+            </view>
+          </view> 
+        <view class="_location clear">
+            <view class="_date_top">
+                <view class=""></view>
+                <view class="_data_text clear">
+                    <view class="left _data_txt">时段</view>
+                    <view class="left _data_time _data_time_f">08</view>
+                    <view class="left _data_time">10</view>
+                    <view class="left _data_time">12</view>
+                    <view class="left _data_time">14</view>
+                    <view class="left _data_time">16</view>
+                    <view class="left _data_time">18</view>
+                    <view class="left _data_time">20</view>
+                    <view class="left _data_time">22</view>
+                    <view class="left _data_time">24</view>
+                </view>
+                <view class="_date_topimg"><image src="../../img/line.png"></image></view>
+            </view>
+            <view class="_data_bottom" wx:for="{{time}}" wx:key="gg">
+                <view class="clear">
+                    <view class="left _date_txt">{{item.date}}</view>
+                    <view class="left clear _date_img">
+                        <view class="left _data_bottomimg" wx:for="{{item.times}}" wx:key="gg">
+                            <image wx:if="{{item.isable}}" src="../../img/about.png"></image>
+                            <image wx:else src="../../img/Irreducible.png"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>            
+      </view>
+</view>
