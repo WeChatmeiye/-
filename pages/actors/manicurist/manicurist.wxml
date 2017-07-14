@@ -1,4 +1,3 @@
-<!--pages/actors/manicurist/manicurist.wxml-->
 <view class="container">
 	<view class="_navbar_title bmg pos-r">
 		<view class="_navbar_item {{currentTab==index ? 'active' : ''}}" data-idx="{{index}}">
@@ -56,46 +55,6 @@
 			<view class="_wrap_btn">今日可约</view>
 		</view>
 	</view>
-  <view>
-    <view>
-        <image src="../../img/{{currentTab==index ? 'up':'turndown'}}.png"></image>
-      </view>
-      <view class="_navbar_icon screen" wx:else>
-        <image src="../../img/screen.png"></image>
-      </view>
-    </view>
-    <view class="_navbar_synthesize pos-f w-100" wx:if="{{sortShow}}">
-      <view class="_navbar_synthesize_item display-flex bg-wt plr30 box-s" wx:for="{{sort}}" wx:key="sort" bindtap="sort" data-index="{{index}}">
-        <view class="ft28 {{sorts == index ? 'cff':'c3'}}">{{item}}</view>
-        <view class="">
-          <image class="gou" src="{{sorts == index ? '../../img/gou2.png':''}}"></image>
-        </view>
-      </view>
-
-    </view>
-  </view>
-
-  <view class="_wrap_item bmg margint clear" wx:for="{{wrap}}" wx:key="gg">
-    <view class="left clear">
-      <view class="_name_img left" bindtap="toManicuristIndex">
-        <image src="{{item.head}}"></image>
-      </view>
-      <view class="_person left">
-        <view class="_wrap_name">{{item.name}}</view>
-        <view class="_wrap_job">{{item.job}}</view>
-        <view class="_wrap_star display-flex c6">
-          <block wx:for="{{item.count}}" wx:key="image_star">
-            <image src="../../img/start1.png">
-            </image>
-          </block>
-          <view class="_wrap_grade">({{grade[item.count-1]}})</view>
-        </view>
-      </view>
-    </view>
-    <view class="right">
-      <view class="_wrap_btn">今日可约</view>
-    </view>
-  </view>
 </view>
 
 <view class="filtrate pos-f w-100 box-s" wx:if="{{filtrateShow}}">
