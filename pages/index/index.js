@@ -111,6 +111,12 @@ Page({
       url: '../actors/shopList/shopList'
     })    
   },
+  //详情
+  toGoods:function(){
+    wx.navigateTo({
+      url: '../levelPages/goods/goods'
+    })     
+  },
   // 领取会员卡
   vipCard(e){
     if (!this.data.vipCard){

@@ -103,7 +103,7 @@
       </view>
       <view class="_navbar_matter">
         <view wx:if="{{currentTab==0}}" class="_composite clear">  
-            <view class="_composite_item left bmg" wx:for="{{composite}}" wx:key="gg">
+            <view class="_composite_item left bmg" wx:for="{{composite}}" wx:key="gg" bindtap="toGoods">
                  <view class="_composite_img"><image src="{{item.img}}"></image></view>
                  <view class="_composite_cant">
                     <view class="_composite_name">{{item.name}}</view>
