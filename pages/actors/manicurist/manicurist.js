@@ -76,5 +76,11 @@ Page({
     this.setData({
       filtrateShow: false//筛选清空
     })
+  },
+  //个人详情
+  toManicuristIndex:function(){
+    wx.navigateTo({
+      url: '../manicuristIndex/manicuristIndex'
+    }) 
   }
 })

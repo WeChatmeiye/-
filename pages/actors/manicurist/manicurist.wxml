@@ -4,25 +4,12 @@
     <view class="_navbar_item {{currentTab==index ? 'active' : ''}}" data-idx="{{index}}" bindtap="navbarTap" wx:for="{{navs}}">
       <view class="_navbar_text">{{item}}</view>
       <view class="_navbar_icon" wx:if="{{index!=2}}">
-
         <image src="../../img/{{currentTab==index ? 'up':'turndown'}}.png"></image>
       </view>
       <view class="_navbar_icon screen" wx:else>
         <image src="../../img/screen.png"></image>
       </view>
     </view>
-    <!--<view class="_navbar_item {{currentTab==1 ? 'active' : ''}}" data-idx="1" bindtap="navbarTap">
-      <view class="_navbar_text"> 销量</view>
-      <view class="_navbar_icon">
-        <image src="../../img/{{currentTab == 1 ? 'up':'turndown'}}.png"></image>
-      </view>
-    </view>
-    <view class="_navbar_item {{currentTab==2 ? 'active' : ''}}" data-idx="2" bindtap="navbarTap">
-      <view class="_navbar_text">筛选</view>
-      <view class="_navbar_icon screen">
-        <image src="../../img/screen.png"></image>
-      </view>
-    </view>-->
     <view class="_navbar_synthesize pos-f w-100" wx:if="{{sortShow}}">
       <view class="_navbar_synthesize_item display-flex bg-wt plr30 box-s" wx:for="{{sort}}" wx:key="sort" bindtap="sort" data-index="{{index}}">
         <view class="ft28 {{sorts == index ? 'cff':'c3'}}">{{item}}</view>
@@ -30,20 +17,13 @@
           <image class="gou" src="{{sorts == index ? '../../img/gou2.png':''}}"></image>
         </view>
       </view>
-      <!--<view class="_navbar_synthesize_item display-flex bg-wt plr30 box-s">
-           <view class="ft28 {{sort == 1 ? 'cff':'white'}}">好评由高到低</view>
-           <view class=""><image class="gou" src="{{sort == 1 ? '../../img/gou2.png':''}}"></image></view>
-        </view>
-        <view class="_navbar_synthesize_item display-flex bg-wt plr30 box-s">
-           <view class="ft28 {{sort == 2 ? 'cff':'white'}}">价格由高到低</view>
-           <view class=""><image class="gou" src="{{sort == 2 ? '../../img/gou2.png':''}}"></image></view>
-        </view>-->
+
     </view>
   </view>
 
   <view class="_wrap_item bmg margint clear" wx:for="{{wrap}}" wx:key="gg">
     <view class="left clear">
-      <view class="_name_img left">
+      <view class="_name_img left" bindtap="toManicuristIndex">
         <image src="{{item.head}}"></image>
       </view>
       <view class="_person left">

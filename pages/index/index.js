@@ -19,12 +19,35 @@ Page({
     recommendDisplay:false,
     vipCard:false,
     userStatus:0,
-    cardNumber: "1776 7375 0074"
+    cardNumber: "1776 7375 0074",
+    menu:[
+      {id:0,title:'综合',checked:true,sort:-1},//默认第一个,sort：-1:不存在,0-向下，1-向上
+      { id: 1, title: '销量', checked: false, sort: 0 },
+      { id: 2, title: '评价', checked: false, sort: -1 },
+    ],
   },
   //综合销量评价切换
-  navbarTap: function (e) {   
+  navbarTap: function (e) {
+    var menu=this.data.menu;
+    var id = e.currentTarget.dataset.idx;
+    for(var i=0,len=menu.length;i<len;i++){
+      if (menu[i].id==id){//当前点击item
+        if (menu[i].checked){//原本就是选中item
+          if (menu[i].sort == 0 || menu[i].sort==1){//需切换上下
+            menu[i].sort = menu[i].sort ==1?0:1;
+          }
+        }
+        else
+        {
+          menu[i].checked = true;
+        }
+      }else{
+        menu[i].checked = false;
+      }
+    }
     this.setData({
-      currentTab: e.currentTarget.dataset.idx
+      currentTab: id,
+      menu: menu
     })
   },
   //店铺介绍
@@ -59,10 +82,34 @@ Page({
     })
   },
   //跳转收藏
-  clickCollect:function () {
+  toCollect:function () {
     wx.navigateTo({
       url: '../secondPages/collect/collect'
     })
+  },
+  //跳转订单
+  toOrder:function(){
+    wx.navigateTo({
+      url: '../orderPages/order/order'
+    })    
+  },
+  //跳转会员卡
+  toClubcard:function(){
+    wx.navigateTo({
+      url: '../clubCard/clubCard'
+    })       
+  },
+  //美甲师列表
+  toManicurist:function(){
+    wx.navigateTo({
+      url: '../actors/manicurist/manicurist'
+    }) 
+  },
+  //门店列表
+  toShopList:function(){
+    wx.navigateTo({
+      url: '../actors/shopList/shopList'
+    })    
   },
   // 领取会员卡
   vipCard(e){
