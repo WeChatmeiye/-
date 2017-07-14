@@ -46,7 +46,7 @@
  .active::after{   position: absolute; border-left: 9px solid transparent;border-right: 9px solid transparent;border-bottom: 9px solid #FF4C90;
     content: " ";display: block; width: 0; height: 0; bottom:0;left:100rpx;}
 ._navbar_matter{margin-top:10rpx; }
-._composite_item{width: 370rpx;height: 550rpx;position: relative;margin-right:10rpx;margin-bottom: 10rpx;}
+._composite_item{width: 370rpx;position: relative;margin-right:10rpx;}
 ._composite_item_head{position: absolute;left: 30rpx;top:330rpx;line-height: 50rpx;color: #fff}
 ._composite_item_img{width: 50rpx;height: 50rpx;overflow: hidden;border-radius: 50%;margin-right: 20rpx;}
 ._composite_item_img image{width: 50rpx;height: 50rpx;}

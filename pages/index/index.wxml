@@ -15,7 +15,7 @@
           </view>
           
           <view class="w-100" wx:else><!--领取会员卡-->
-                <view class="draw ft32 txt-c w-100">领取会员卡</view>
+                <view class="draw ft32 txt-c w-100" bindtap="toClubcard">领取会员卡</view>
                 <view class="w-100 txt-c ft22 draw_title">快来领取你的专属会员卡~</view>
           </view>
           <view class="index-nav">
@@ -23,11 +23,11 @@
                 <image src="../img/card.png"></image>
                 <text>个人信息</text>
               </view>
-            <view class="index-item" bindtap="clickCollect">
+            <view class="index-item" bindtap="toCollect">
                 <image src="../img/atcrt.png"></image>
                 <text>我的收藏</text>
               </view>
-            <view class="index-item">
+            <view class="index-item" bindtap="toOrder">
                 <image src="../img/order.png"></image>
                 <text>我的订单</text>
               </view>
@@ -36,7 +36,7 @@
   </view>
   <view class="index_recommend bmg clear" bindtap="clickRecommend">
     <view class="left index_brand">
-      <image src="../img/picture.png"></image>
+      <image src="../img/header.png"></image>
     </view>
     <view class="left index_mend">
       <view class="index_mend_title">{{mendTitle}}</view>
@@ -46,7 +46,7 @@
   <view class="index_sts bmg margint">
     <view class="index_sts_title clear">
       <view class="index_star left">匠星</view>
-      <view class="right clear index_more">
+      <view class="right clear index_more" bindtap="toManicurist">
         <view class="right"><image src="../img/right.png"></image></view>
         <view class="text right">查看更多</view>        
       </view>
@@ -75,7 +75,7 @@
   <view class="index_sts bmg margint">
     <view class="index_sts_title clear">
       <view class="index_star left">附近门店</view>
-      <view class="right clear index_more">
+      <view class="right clear index_more" bindtap="toShopList">
         <view class="right"><image src="../img/right.png"></image></view>
         <view class="text right">立即进入</view>        
       </view>
@@ -90,16 +90,20 @@
    <!--商品排序-->
    <view class="margint">
       <view class="_navbar_title bmg">
-          <view class="_navbar_item {{currentTab==0 ? 'active' : ''}}" data-idx="0" bindtap="navbarTap">综合</view>    
-          <view class="_navbar_item {{currentTab==1 ? 'active' : ''}}" data-idx="1" bindtap="navbarTap">         
-             销量
-              <view class="_navbar_icon"><image src="../img/turndown.png"></image></view>
-          </view>   
-          <view class="_navbar_item {{currentTab==2 ? 'active' : ''}}" data-idx="2" bindtap="navbarTap">评价</view>         
+       <view class="_composite_item left bmg" wx:for="{{menu}}" wx:key="gg">
+       <view class="_navbar_item {{item.checked ? 'active' : ''}}" data-idx="{{item.id}}" bindtap="navbarTap">         
+             {{item.title}}
+             <view class="_navbar_icon" >
+                  <image wx:if="{{!item.checked&&item.sort!=-1}}" src="../img/turndown.png"></image>
+                  <image wx:if="{{item.checked&&item.sort==1}}" src="../img/up.png"></image>
+                  <image wx:if="{{item.checked&&item.sort==0}}" src="../img/down.png"></image>
+             </view>
+          </view> 
+       </view>
       </view>
       <view class="_navbar_matter">
         <view wx:if="{{currentTab==0}}" class="_composite clear">  
-            <view class="_composite_item left bmg" wx:for="{{composite}}" wx:key="gg">
+            <view class="_composite_item left bmg" wx:for="{{composite}}" wx:key="gg" bindtap="toGoods">
                  <view class="_composite_img"><image src="{{item.img}}"></image></view>
                  <view class="_composite_cant">
                     <view class="_composite_name">{{item.name}}</view>

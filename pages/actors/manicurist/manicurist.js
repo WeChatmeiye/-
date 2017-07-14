@@ -17,23 +17,25 @@ Page({
     filtrates:0,
     filtrateType: ["不限", "美甲师", "美容师", "美睫师", "造型师", "美发师", "健身教练"],
     filtrateTypes:0,
-    filtrateShow:false
+    filtrateShow:false,
+    currentTabs:false,
+    currentTab:0
   },
   navbarTap: function (e) { //点击头部类别
     this.setData({
-      currentTab: e.currentTarget.dataset.idx
+      currentTab: e.currentTarget.dataset.idx,
     })
-    if (e.currentTarget.dataset.idx == 0){
-      this.setData({
-        sortShow: !this.data.sortShow
-      })
-    } else if (e.currentTarget.dataset.idx == 1){
-
-    }else{
-      this.setData({
-        filtrateShow: !this.data.filtrateShow
-      })
-    }
+  },
+  SalesSort(e){
+  	 this.setData({
+      currentTab: e.currentTarget.dataset.idx,
+      currentTabs:!this.data.currentTabs
+    })
+  },
+  screen(e){
+  	 this.setData({
+      filtrateShow:!this.data.filtrateShow
+    })
   },
   onLoad: function (options) {
   
@@ -41,7 +43,6 @@ Page({
   sort(e){ //排序
     const navs = this.data.navs,
       sort = this.data.sort;
-
     var inx = e.currentTarget.dataset.index;
     navs[0] = sort[inx]
     this.setData({
@@ -69,6 +70,7 @@ Page({
   },
   submit(e){
     this.setData({
+    	currentTab: 2,
       filtrateShow: false //筛选点击确定
     })
   },
@@ -76,5 +78,11 @@ Page({
     this.setData({
       filtrateShow: false//筛选清空
     })
+  },
+  //个人详情
+  toManicuristIndex:function(){
+    wx.navigateTo({
+      url: '../manicuristIndex/manicuristIndex'
+    }) 
   }
 })

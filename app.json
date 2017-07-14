@@ -1,5 +1,6 @@
 {
   "pages":[    
+
     "pages/index/index",
     "pages/logs/logs",
     "pages/secondPages/store/store",
@@ -18,7 +19,11 @@
     "pages/orderPages/paySuccess/paySuccess",
     "pages/orderPages/orderAppraise/orderAppraise",
     "pages/actors/manicurist/manicurist",
-    "pages/clubCard/clubCard"
+    "pages/actors/manicuristIndex/manicuristIndex",
+    "pages/clubCard/clubCard",
+    "pages/actors/shopList/shopList",
+    "pages/actors/addressList/addressList",
+    "pages/actors/store/store"
   ],
   "window":{
     "backgroundTextStyle":"light",

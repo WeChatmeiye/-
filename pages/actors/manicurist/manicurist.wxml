@@ -1,97 +1,101 @@
 <!--pages/actors/manicurist/manicurist.wxml-->
 <view class="container">
-  <view class="_navbar_title bmg pos-r">
-    <view class="_navbar_item {{currentTab==index ? 'active' : ''}}" data-idx="{{index}}" bindtap="navbarTap" wx:for="{{navs}}">
-      <view class="_navbar_text">{{item}}</view>
+	<view class="_navbar_title bmg pos-r">
+		<view class="_navbar_item {{currentTab==index ? 'active' : ''}}" data-idx="{{index}}">
+			<!--<view class="_navbar_text">{{item}}</view>
+      <view class="_navbar_icon" wx:if="{{index == 0}}">
+      	<image src="../../img/{{currentTab==index ? 'up':'turndown'}}.png"></image>
+      </view>	
+      <view class="_navbar_icon" wx:if="{{index == 1 && currentTab == 1}}">
+        <image src="../../img/{{currentTabs ? 'up':'down'}}.png"></image>
+      </view>
       <view class="_navbar_icon" wx:if="{{index!=2}}">
+        <image src="../../img/{{currentTabs==index ? 'up':'turndown'}}.png"></image>
+      </view>-->
+			<view class="_navbar_item {{currentTab==0 ? 'active' : ''}}" data-idx="0" bindtap="navbarTap">
+				<view class="_navbar_text"> 综合排序</view>
+				<view class="_navbar_icon">
+					<image src="../../img/{{currentTab == 0 ? 'up':'turndown'}}.png"></image>
+				</view>
+			</view>
+			<view class="_navbar_item {{currentTab==1 ? 'active' : ''}}" data-idx="1" bindtap="SalesSort">
+				<view class="_navbar_text">销量</view>
+				<view class="_navbar_icon" wx:if="{{currentTab != 1}}">
+					<image src="../../img/{{currentTab == 1 ? 'up':'turndown'}}.png"></image>
+				</view>
+				<view class="_navbar_icon" wx:else>
+					<image src="../../img/{{currentTabs ? 'up':'down'}}.png"></image>
+				</view>
+			</view>
+			<view class="_navbar_item {{currentTab==2 ? 'active' : ''}}" data-idx="2" bindtap="screen">
+				<view class="_navbar_text">筛选</view>
+				<view class="_navbar_icon screen">
+					<image src="../../img/screen.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="_navbar_synthesize pos-f w-100" wx:if="{{sortShow}}">
+			<view class="_navbar_synthesize_item display-flex bg-wt plr30 box-s" wx:for="{{sort}}" wx:key="sort" bindtap="sort" data-index="{{index}}">
+				<view class="ft28 {{sorts == index ? 'cff':'c3'}}">{{item}}</view>
+				<view class="">
+					<image class="gou" src="{{sorts == index ? '../../img/gou2.png':''}}"></image>
+				</view>
+			</view>
 
-        <image src="../../img/{{currentTab==index ? 'up':'turndown'}}.png"></image>
-      </view>
-      <view class="_navbar_icon screen" wx:else>
-        <image src="../../img/screen.png"></image>
-      </view>
-    </view>
-    <!--<view class="_navbar_item {{currentTab==1 ? 'active' : ''}}" data-idx="1" bindtap="navbarTap">
-      <view class="_navbar_text"> 销量</view>
-      <view class="_navbar_icon">
-        <image src="../../img/{{currentTab == 1 ? 'up':'turndown'}}.png"></image>
-      </view>
-    </view>
-    <view class="_navbar_item {{currentTab==2 ? 'active' : ''}}" data-idx="2" bindtap="navbarTap">
-      <view class="_navbar_text">筛选</view>
-      <view class="_navbar_icon screen">
-        <image src="../../img/screen.png"></image>
-      </view>
-    </view>-->
-    <view class="_navbar_synthesize pos-f w-100" wx:if="{{sortShow}}">
-      <view class="_navbar_synthesize_item display-flex bg-wt plr30 box-s" wx:for="{{sort}}" wx:key="sort" bindtap="sort" data-index="{{index}}">
-        <view class="ft28 {{sorts == index ? 'cff':'c3'}}">{{item}}</view>
-        <view class="">
-          <image class="gou" src="{{sorts == index ? '../../img/gou2.png':''}}"></image>
-        </view>
-      </view>
-      <!--<view class="_navbar_synthesize_item display-flex bg-wt plr30 box-s">
-           <view class="ft28 {{sort == 1 ? 'cff':'white'}}">好评由高到低</view>
-           <view class=""><image class="gou" src="{{sort == 1 ? '../../img/gou2.png':''}}"></image></view>
-        </view>
-        <view class="_navbar_synthesize_item display-flex bg-wt plr30 box-s">
-           <view class="ft28 {{sort == 2 ? 'cff':'white'}}">价格由高到低</view>
-           <view class=""><image class="gou" src="{{sort == 2 ? '../../img/gou2.png':''}}"></image></view>
-        </view>-->
-    </view>
-  </view>
+		</view>
+	</view>
 
-  <view class="_wrap_item bmg margint clear" wx:for="{{wrap}}" wx:key="gg">
-    <view class="left clear">
-      <view class="_name_img left">
-        <image src="{{item.head}}"></image>
-      </view>
-      <view class="_person left">
-        <view class="_wrap_name">{{item.name}}</view>
-        <view class="_wrap_job">{{item.job}}</view>
-        <view class="_wrap_star display-flex c6">
-          <block wx:for="{{item.count}}" wx:key="image_star">
-            <image src="../../img/start1.png">
-            </image>
-          </block>
-          <view class="_wrap_grade">({{grade[item.count-1]}})</view>
-        </view>
-      </view>
-    </view>
-    <view class="right">
-      <view class="_wrap_btn">今日可约</view>
-    </view>
-  </view>
+	<view class="_wrap_item bmg margint clear" wx:for="{{wrap}}" wx:key="gg">
+		<view class="left clear">
+			<view class="_name_img left" bindtap="toManicuristIndex">
+				<image src="{{item.head}}"></image>
+			</view>
+			<view class="_person left">
+				<view class="_wrap_name">{{item.name}}</view>
+				<view class="_wrap_job">{{item.job}}</view>
+				<view class="_wrap_star display-flex c6">
+					<block wx:for="{{item.count}}" wx:key="image_star">
+						<image src="../../img/start1.png">
+						</image>
+					</block>
+					<view class="_wrap_grade">({{grade[item.count-1]}})</view>
+				</view>
+			</view>
+		</view>
+		<view class="right">
+			<view class="_wrap_btn">今日可约</view>
+		</view>
+	</view>
 </view>
 
 <view class="filtrate pos-f w-100 box-s" wx:if="{{filtrateShow}}">
-  <view class="filtrate_cont bg-wt">
-    <view class="filtrate_cont_top w-100 display-flex box-s">
-      <view class="close" bindtap="close">
-        <image src="../../img/xx.png"></image>
-      </view>
-      <view class="filtrate_cont_top_title ft30 c9 txt-c">筛选</view>
-    </view>
-    <view class="filtrate_cont_main display-flex box-s">
-      <view class="filtrate_cont_main_left">
-        <block wx:for="{{filtrate}}" wx:key="filtrate">
-          <view class="filtrate_cont_main_left_list ft28 c3 box-s {{filtrates == index ? 'on':''}}" data-index="{{index}}" bindtap="filtrates">{{item}}</view>
-        </block>
-      </view>
-      <view class="filtrate_cont_main_right">
-        <block wx:for="{{filtrateType}}" wx:key="filtrate">
-          <view class="filtrate_cont_main_right_list display-flex ft28 c3 box-s {{filtrateTypes == index ? 'on':''}}" data-index="{{index}}" bindtap="filtrateTypes">
-            <view class="">{{item}}</view>
-            <view class="">
-              <image src=" {{filtrateTypes == index ? '../../img/gou2.png':''}}"></image>
-            </view>
-          </view>
-        </block>
-      </view>
-    </view>
-    <view class="filtrate_cont_bottom w-100 display-flex box-s">
-      <view class="empty ft30 c3 txt-c" bindtap="empty">清空</view>
-      <view class="submit ft30 white txt-c" bindtap="submit">确定</view>
-    </view>
-  </view>
+	<view class="filtrate_cont bg-wt">
+		<view class="filtrate_cont_top w-100 display-flex box-s">
+			<view class="close" bindtap="close">
+				<image src="../../img/xx.png"></image>
+			</view>
+			<view class="filtrate_cont_top_title ft30 c9 txt-c">筛选</view>
+		</view>
+		<view class="filtrate_cont_main display-flex box-s">
+			<view class="filtrate_cont_main_left">
+				<block wx:for="{{filtrate}}" wx:key="filtrate">
+					<view class="filtrate_cont_main_left_list ft28 c3 box-s {{filtrates == index ? 'on':''}}" data-index="{{index}}" bindtap="filtrates">{{item}}</view>
+				</block>
+			</view>
+			<view class="filtrate_cont_main_right">
+				<block wx:for="{{filtrateType}}" wx:key="filtrate">
+					<view class="filtrate_cont_main_right_list display-flex ft28 c3 box-s {{filtrateTypes == index ? 'on':''}}" data-index="{{index}}" bindtap="filtrateTypes">
+						<view class="">{{item}}</view>
+						<view class="">
+							<image src=" {{filtrateTypes == index ? '../../img/gou2.png':''}}"></image>
+						</view>
+					</view>
+				</block>
+			</view>
+		</view>
+		<view class="filtrate_cont_bottom w-100 display-flex box-s">
+			<view class="empty ft30 c3 txt-c" bindtap="empty">清空</view>
+			<view class="submit ft30 white txt-c" bindtap="submit">确定</view>
+		</view>
+	</view>
 </view>

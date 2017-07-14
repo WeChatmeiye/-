@@ -9,22 +9,48 @@
         </view>
     </view>
    <view class="margint">
-      <view class="_navbar_title bmg">
-          <view class="_navbar_item {{currentTab==0 ? 'active' : ''}}" data-idx="0" bindtap="navbarTap">
-          综合排序
-              <view class="_navbar_icon four"><image src="../../img/turndown.png"></image></view>
-
-          </view>    
-          <view class="_navbar_item {{currentTab==1 ? 'active' : ''}}" data-idx="1" bindtap="navbarTap">         
-             销量
-              <view class="_navbar_icon"><image src="../../img/turndown.png"></image></view>
-
-          </view>   
-          <view class="_navbar_item {{currentTab==2 ? 'active' : ''}}" data-idx="2" bindtap="navbarTap">
-          筛选
-              <view class="_navbar_icon screen"><image src="../../img/screen.png"></image></view>
-          </view>         
+     <view class="_navbar_title bmg pos-r">
+			<!--<view class="_navbar_text">{{item}}</view>
+      <view class="_navbar_icon" wx:if="{{index == 0}}">
+      	<image src="../../img/{{currentTab==index ? 'up':'turndown'}}.png"></image>
+      </view>	
+      <view class="_navbar_icon" wx:if="{{index == 1 && currentTab == 1}}">
+        <image src="../../img/{{currentTabs ? 'up':'down'}}.png"></image>
       </view>
+      <view class="_navbar_icon" wx:if="{{index!=2}}">
+        <image src="../../img/{{currentTabs==index ? 'up':'turndown'}}.png"></image>
+      </view>-->
+			<view class="_navbar_item {{currentTab==0 ? 'active' : ''}}" data-idx="0" bindtap="navbarTap">
+				<view class="_navbar_text"> 综合排序</view>
+				<view class="_navbar_icon">
+					<image src="../../img/{{currentTab == 0 ? 'up':'turndown'}}.png"></image>
+				</view>
+			</view>
+			<view class="_navbar_item {{currentTab==1 ? 'active' : ''}}" data-idx="1" bindtap="SalesSort">
+				<view class="_navbar_text">销量</view>
+				<view class="_navbar_icon" wx:if="{{currentTab != 1}}">
+					<image src="../../img/{{currentTab == 1 ? 'up':'turndown'}}.png"></image>
+				</view>
+				<view class="_navbar_icon" wx:else>
+					<image src="../../img/{{currentTabs ? 'up':'down'}}.png"></image>
+				</view>
+			</view>
+			<view class="_navbar_item {{currentTab==2 ? 'active' : ''}}" data-idx="2" bindtap="screen">
+				<view class="_navbar_text">筛选</view>
+				<view class="_navbar_icon screen">
+					<image src="../../img/screen.png"></image>
+				</view>
+		</view>
+		<view class="_navbar_synthesize pos-f w-100" wx:if="{{sortShow}}">
+			<view class="_navbar_synthesize_item display-flex bg-wt plr30 box-s" wx:for="{{sort}}" wx:key="sort" bindtap="sort" data-index="{{index}}">
+				<view class="ft28 {{sorts == index ? 'cff':'c3'}}">{{item}}</view>
+				<view class="">
+					<image class="gou" src="{{sorts == index ? '../../img/gou2.png':''}}"></image>
+				</view>
+			</view>
+
+		</view>
+	</view>
       <view class="_navbar_matter" wx:if="{{isNo}}">
         <view wx:if="{{currentTab==0}}" class="_composite clear">  
             <view class="_composite_item left bmg" wx:for="{{composite}}" wx:key="gg">
@@ -62,4 +88,36 @@
       </view>   
     </view>  
  
+</view>
+
+<view class="filtrate pos-f w-100 box-s" wx:if="{{filtrateShow}}">
+	<view class="filtrate_cont bg-wt">
+		<view class="filtrate_cont_top w-100 display-flex box-s">
+			<view class="close" bindtap="close">
+				<image src="../../img/xx.png"></image>
+			</view>
+			<view class="filtrate_cont_top_title ft30 c9 txt-c">筛选</view>
+		</view>
+		<view class="filtrate_cont_main display-flex box-s">
+			<view class="filtrate_cont_main_left">
+				<block wx:for="{{filtrate}}" wx:key="filtrate">
+					<view class="filtrate_cont_main_left_list ft28 c3 box-s {{filtrates == index ? 'on':''}}" data-index="{{index}}" bindtap="filtrates">{{item}}</view>
+				</block>
+			</view>
+			<view class="filtrate_cont_main_right">
+				<block wx:for="{{filtrateType}}" wx:key="filtrate">
+					<view class="filtrate_cont_main_right_list display-flex ft28 c3 box-s {{filtrateTypes == index ? 'on':''}}" data-index="{{index}}" bindtap="filtrateTypes">
+						<view class="">{{item}}</view>
+						<view class="">
+							<image src=" {{filtrateTypes == index ? '../../img/gou2.png':''}}"></image>
+						</view>
+					</view>
+				</block>
+			</view>
+		</view>
+		<view class="filtrate_cont_bottom w-100 display-flex box-s">
+			<view class="empty ft30 c3 txt-c" bindtap="empty">清空</view>
+			<view class="submit ft30 white txt-c" bindtap="submit">确定</view>
+		</view>
+	</view>
 </view>

@@ -1,6 +1,6 @@
 <!--pages/orderPages/order/order.wxml-->
 <view class="container">
-    <view class="_contant_nav">
+
           <scroll-view class="_me_title_items bmg" scroll-x="true">
             <block wx:for-items="{{items}}" wx:key="{{index}}">
               <view id="{{index}}" class="_me_title_Item {{currentTab == index ? 'active' : ''}}" bindtap="navbarTap">
@@ -8,7 +8,7 @@
               </view>
             </block>
           </scroll-view>
-    </view>
+
     <view class="_contant_item bmg margint">
         <view class="_contant_item_main clear">
             <view class="_contant_item_store left">鄞州区罗蒙环球城店</view>
